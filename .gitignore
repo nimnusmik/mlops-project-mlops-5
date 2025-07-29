@@ -1,0 +1,41 @@
+.env
+
+# Python 바이트코드 파일 (자동 생성됨)
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# 가상 환경 디렉토리 (개발 환경 격리용)
+.venv/
+env/
+venv/
+*.env/
+*.venv/
+
+# IDE (통합 개발 환경) 관련 파일 (개인 설정)
+.idea/             # PyCharm, IntelliJ IDEA
+.vscode/           # VS Code
+*.sublime-project  # Sublime Text
+*.sublime-workspace
+*.swp              # Vim 스왑 파일
+
+# 운영체제 관련 파일 (자동 생성됨)
+.DS_Store          # macOS
+Thumbs.db          # Windows
+ehthumbs.db
+.localized
+
+# 빌드 및 배포 관련 파일
+dist/
+build/
+*.egg-info/
+.pytest_cache/     # pytest 캐시
+.coverage          # 코드 커버리지 리포트
+htmlcov/           # 코드 커버리지 HTML 리포트
+
+# 로그 및 데이터 결과 파일 (런타임에 생성됨)
+*.log
+*.sqlite3
+*.db
+result/            # 현재 프로젝트의 'result' 폴더 (크롤링/전처리 결과 저장)
