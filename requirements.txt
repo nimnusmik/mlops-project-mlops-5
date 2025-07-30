@@ -1,0 +1,6 @@
+#임시 생성
+requests
+pandas
+beautifulsoup4
+psycopg2-binary
+python-dotenv

@@ -17,8 +17,8 @@
             "release_date": "2025-06-06",
             "title": "드래곤 길들이기",
             "video": false,
-            "vote_average": 8.072,
-            "vote_count": 1302
+            "vote_average": 8.076,
+            "vote_count": 1316
         },
         {
             "adult": false,
@@ -60,7 +60,7 @@
             "title": "릴로 & 스티치",
             "video": false,
             "vote_average": 7.349,
-            "vote_count": 1146
+            "vote_count": 1152
         },
         {
             "adult": false,
@@ -79,8 +79,8 @@
             "release_date": "2025-07-16",
             "title": "메간 2.0",
             "video": false,
-            "vote_average": 7.627,
-            "vote_count": 532
+            "vote_average": 7.633,
+            "vote_count": 537
         },
         {
             "adult": false,
@@ -98,8 +98,26 @@
             "release_date": "2025-07-24",
             "title": "판타스틱 4: 새로운 출발",
             "video": false,
-            "vote_average": 7.375,
-            "vote_count": 519
+            "vote_average": 7.352,
+            "vote_count": 539
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/x5dVPttNDZaVRTvbk7pYrtGZoZN.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 1263256,
+            "original_language": "en",
+            "original_title": "Happy Gilmore 2",
+            "overview": "해피 길모어가 골프를 그만뒀을까? 천만의 말씀. 다혈질의 골프 레전드로 분한 애덤 샌들러가 이번에는 아이의 꿈을 위해 다시 골프채를 휘두른다.",
+            "popularity": 397.4049,
+            "poster_path": "/ynT06XivgBDkg7AtbDbX1dJeBGY.jpg",
+            "release_date": "2025-07-25",
+            "title": "해피 길모어 2",
+            "video": false,
+            "vote_average": 6.701,
+            "vote_count": 278
         },
         {
             "adult": false,
@@ -117,45 +135,8 @@
             "release_date": "2025-06-19",
             "title": "브라이드 하드",
             "video": false,
-            "vote_average": 5.944,
+            "vote_average": 5.9,
             "vote_count": 36
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/x5dVPttNDZaVRTvbk7pYrtGZoZN.jpg",
-            "genre_ids": [
-                35
-            ],
-            "id": 1263256,
-            "original_language": "en",
-            "original_title": "Happy Gilmore 2",
-            "overview": "해피 길모어가 골프를 그만뒀을까? 천만의 말씀. 다혈질의 골프 레전드로 분한 애덤 샌들러가 이번에는 아이의 꿈을 위해 다시 골프채를 휘두른다.",
-            "popularity": 397.4049,
-            "poster_path": "/ynT06XivgBDkg7AtbDbX1dJeBGY.jpg",
-            "release_date": "2025-07-25",
-            "title": "해피 길모어 2",
-            "video": false,
-            "vote_average": 6.704,
-            "vote_count": 256
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/8or4S9BPhkeYK0vlKsPFee4JVWI.jpg",
-            "genre_ids": [
-                28,
-                18
-            ],
-            "id": 1315986,
-            "original_language": "en",
-            "original_title": "Man with No Past",
-            "overview": "",
-            "popularity": 282.8766,
-            "poster_path": "/eWHvROuznSzcxBAAkzX1X0Rmzoe.jpg",
-            "release_date": "2025-01-13",
-            "title": "맨 위드 노 패스트",
-            "video": false,
-            "vote_average": 6.402,
-            "vote_count": 41
         },
         {
             "adult": false,
@@ -174,8 +155,27 @@
             "release_date": "2025-07-09",
             "title": "슈퍼맨",
             "video": false,
-            "vote_average": 7.429,
-            "vote_count": 1251
+            "vote_average": 7.4,
+            "vote_count": 1258
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8or4S9BPhkeYK0vlKsPFee4JVWI.jpg",
+            "genre_ids": [
+                28,
+                18
+            ],
+            "id": 1315986,
+            "original_language": "en",
+            "original_title": "Man with No Past",
+            "overview": "",
+            "popularity": 282.8766,
+            "poster_path": "/eWHvROuznSzcxBAAkzX1X0Rmzoe.jpg",
+            "release_date": "2025-01-13",
+            "title": "맨 위드 노 패스트",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 41
         },
         {
             "adult": false,
@@ -194,7 +194,7 @@
             "release_date": "2025-06-27",
             "title": "아이스 로드: 벤전스",
             "video": false,
-            "vote_average": 6.909,
+            "vote_average": 6.9,
             "vote_count": 148
         },
         {
@@ -214,8 +214,8 @@
             "release_date": "2025-05-08",
             "title": "가라데 키드: 레전드",
             "video": false,
-            "vote_average": 7.209,
-            "vote_count": 558
+            "vote_average": 7.2,
+            "vote_count": 565
         },
         {
             "adult": false,
@@ -235,8 +235,8 @@
             "release_date": "2024-07-09",
             "title": "천사의 몰락, 평화의 전사들",
             "video": false,
-            "vote_average": 5.736,
-            "vote_count": 36
+            "vote_average": 5.6,
+            "vote_count": 37
         },
         {
             "adult": false,
@@ -255,8 +255,8 @@
             "release_date": "2025-07-02",
             "title": "쥬라기 월드: 새로운 시작",
             "video": false,
-            "vote_average": 6.3,
-            "vote_count": 828
+            "vote_average": 6.338,
+            "vote_count": 833
         },
         {
             "adult": false,
@@ -275,8 +275,87 @@
             "release_date": "2025-08-06",
             "title": "발레리나",
             "video": false,
-            "vote_average": 7.473,
-            "vote_count": 1184
+            "vote_average": 7.5,
+            "vote_count": 1189
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
+            "genre_ids": [
+                28,
+                878,
+                12
+            ],
+            "id": 986056,
+            "original_language": "en",
+            "original_title": "Thunderbolts*",
+            "overview": "어벤져스가 사라진 후, 세계 최대의 위협과 마주한 세상을 구하기 위해 전직 스파이, 암살자, 살인 청부 업자 등 마블의 별난 놈들이 펼치는 예측불허 팀플레이를 담은 액션 블록버스터",
+            "popularity": 206.1897,
+            "poster_path": "/1lI4iDsaVnOnnZPI9igWkL8jHPL.jpg",
+            "release_date": "2025-04-30",
+            "title": "썬더볼츠*",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 2049
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/uIpJPDNFoeX0TVml9smPrs9KUVx.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 574475,
+            "original_language": "en",
+            "original_title": "Final Destination Bloodlines",
+            "overview": "끝없는 악몽에 시달리던 스테파니는 그 원인을 찾던 중 집안 대대로 내려오는 죽음의 저주와 그 실체를 알게 된다. 놀랍게도, 죽음의 순서가 자신의 가족에게 이어졌음을 알게 되는데...  이제, 다음 차례는 누구?",
+            "popularity": 197.8156,
+            "poster_path": "/agaIglFrRGuUQOzkhzlrvcjJgt2.jpg",
+            "release_date": "2025-05-14",
+            "title": "파이널 데스티네이션: 블러드라인",
+            "video": false,
+            "vote_average": 7.171,
+            "vote_count": 1766
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eNSUknQqzTXWE5EeT8ZnVccEPR0.jpg",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "id": 1285965,
+            "original_language": "en",
+            "original_title": "Dangerous Animals",
+            "overview": "상어 체험 투어, 일명 케이지 다이빙을 즐기기 위해 부둣가에 도착한 커플 헤더와 그렉. 그들은 투어를 운영하는 배 주인 터커를 만나 그의 배에 오르고, 그곳에서 마주한 \"상어를 이겼다\"는 기사의 액자는 이들에게 닥칠 불길한 앞날을 암시한다. 한편, 한적한 바닷가에서 시간을 보내던 제퍼와 모세스 역시 터커에게 납치되어 그의 배 안에 감금된다.",
+            "popularity": 191.5408,
+            "poster_path": "/oQJ1PKLIE2gF5cr3xwjLCvv4jcU.jpg",
+            "release_date": "2025-07-05",
+            "title": "데인저러스 애니멀스",
+            "video": false,
+            "vote_average": 6.572,
+            "vote_count": 97
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/9l6bcHNFLR2fcCBSPzEeqxiQhwU.jpg",
+            "genre_ids": [
+                28,
+                35,
+                80,
+                9648
+            ],
+            "id": 1374534,
+            "original_language": "nl",
+            "original_title": "Bad Boa's",
+            "overview": "동네 치안을 위해 헌신하는 열정 넘치는 단속 요원과 이 지역으로 좌천된 저돌적인 전직 형사. 두 사람이 어쩔 수 없이 한 팀이 되면서 로테르담 거리에 예측 불허의 상황이 펼쳐진다.",
+            "popularity": 188.9783,
+            "poster_path": "/poRvoGlxotJ5YDzLCGCUZHOF8x.jpg",
+            "release_date": "2025-07-11",
+            "title": "어쩌다 파트너",
+            "video": false,
+            "vote_average": 5.841,
+            "vote_count": 107
         },
         {
             "adult": false,
@@ -298,87 +377,8 @@
             "release_date": "2025-06-20",
             "title": "케이팝 데몬 헌터스",
             "video": false,
-            "vote_average": 8.471,
-            "vote_count": 836
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/rthMuZfFv4fqEU4JVbgSW9wQ8rs.jpg",
-            "genre_ids": [
-                28,
-                878,
-                12
-            ],
-            "id": 986056,
-            "original_language": "en",
-            "original_title": "Thunderbolts*",
-            "overview": "어벤져스가 사라진 후, 세계 최대의 위협과 마주한 세상을 구하기 위해 전직 스파이, 암살자, 살인 청부 업자 등 마블의 별난 놈들이 펼치는 예측불허 팀플레이를 담은 액션 블록버스터",
-            "popularity": 206.1897,
-            "poster_path": "/1lI4iDsaVnOnnZPI9igWkL8jHPL.jpg",
-            "release_date": "2025-04-30",
-            "title": "썬더볼츠*",
-            "video": false,
-            "vote_average": 7.411,
-            "vote_count": 2045
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/uIpJPDNFoeX0TVml9smPrs9KUVx.jpg",
-            "genre_ids": [
-                27,
-                9648
-            ],
-            "id": 574475,
-            "original_language": "en",
-            "original_title": "Final Destination Bloodlines",
-            "overview": "끝없는 악몽에 시달리던 스테파니는 그 원인을 찾던 중 집안 대대로 내려오는 죽음의 저주와 그 실체를 알게 된다. 놀랍게도, 죽음의 순서가 자신의 가족에게 이어졌음을 알게 되는데...  이제, 다음 차례는 누구?",
-            "popularity": 197.8156,
-            "poster_path": "/agaIglFrRGuUQOzkhzlrvcjJgt2.jpg",
-            "release_date": "2025-05-14",
-            "title": "파이널 데스티네이션: 블러드라인",
-            "video": false,
-            "vote_average": 7.17,
-            "vote_count": 1761
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/9l6bcHNFLR2fcCBSPzEeqxiQhwU.jpg",
-            "genre_ids": [
-                28,
-                35,
-                80,
-                9648
-            ],
-            "id": 1374534,
-            "original_language": "nl",
-            "original_title": "Bad Boa's",
-            "overview": "동네 치안을 위해 헌신하는 열정 넘치는 단속 요원과 이 지역으로 좌천된 저돌적인 전직 형사. 두 사람이 어쩔 수 없이 한 팀이 되면서 로테르담 거리에 예측 불허의 상황이 펼쳐진다.",
-            "popularity": 188.9783,
-            "poster_path": "/poRvoGlxotJ5YDzLCGCUZHOF8x.jpg",
-            "release_date": "2025-07-11",
-            "title": "어쩌다 파트너",
-            "video": false,
-            "vote_average": 5.8,
-            "vote_count": 105
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/dUGIhpvAVoX0YtKcjLHCGtNYq4p.jpg",
-            "genre_ids": [
-                27,
-                53
-            ],
-            "id": 1285965,
-            "original_language": "en",
-            "original_title": "Dangerous Animals",
-            "overview": "상어 체험 투어, 일명 케이지 다이빙을 즐기기 위해 부둣가에 도착한 커플 헤더와 그렉. 그들은 투어를 운영하는 배 주인 터커를 만나 그의 배에 오르고, 그곳에서 마주한 \"상어를 이겼다\"는 기사의 액자는 이들에게 닥칠 불길한 앞날을 암시한다. 한편, 한적한 바닷가에서 시간을 보내던 제퍼와 모세스 역시 터커에게 납치되어 그의 배 안에 감금된다.",
-            "popularity": 191.5408,
-            "poster_path": "/9tk3Si960hg4E49eMt81dS7Qe9Z.jpg",
-            "release_date": "2025-07-05",
-            "title": "데인저러스 애니멀스",
-            "video": false,
-            "vote_average": 6.548,
-            "vote_count": 93
+            "vote_average": 8.475,
+            "vote_count": 841
         },
         {
             "adult": false,
@@ -396,27 +396,8 @@
             "release_date": "2025-07-02",
             "title": "올드 가드 2",
             "video": false,
-            "vote_average": 6.0,
-            "vote_count": 569
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/lSbblLngbeZIn6G4WXDcyQ6SLhw.jpg",
-            "genre_ids": [
-                28,
-                18
-            ],
-            "id": 911430,
-            "original_language": "en",
-            "original_title": "F1",
-            "overview": "한때 주목받는 유망주였지만 끔찍한 사고로 F1®에서 우승하지 못하고 한순간에 추락한 드라이버 소니 헤이스. 그의 오랜 동료인 루벤 세르반테스에게 레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한다.  그러나 팀 내 떠오르는 천재 드라이버 조슈아 피어스와 소니 헤이스의 갈등은 날이 갈수록 심해지고. 설상가상 우승을 향한 APXGP 팀의 전략 또한 번번이 실패하며 최하위권을 벗어나지 못하고 고전하는데···",
-            "popularity": 157.3218,
-            "poster_path": "/bvVoP1t2gNvmE9ccSrqR1zcGHGM.jpg",
-            "release_date": "2025-06-25",
-            "title": "F1 더 무비",
-            "video": false,
-            "vote_average": 7.615,
-            "vote_count": 925
+            "vote_average": 6.037,
+            "vote_count": 571
         },
         {
             "adult": false,
@@ -430,13 +411,13 @@
             "original_language": "en",
             "original_title": "Heads of State",
             "overview": "영국 총리 와 미국 대통령 의 경쟁 때문에 양국의 동맹이 위태로워진다. 그러나 강력한 적대 세력의 표적이 된 둘은 어쩔 수 없이 서로 의지하며 국경을 넘나드는 위험한 도주를 함께하고 영국 비밀정보국 요원 노엘 과 협력해 자유 진영을 위협하는 음모를 타개해야 한다.",
-            "popularity": 156.8043,
+            "popularity": 144.604,
             "poster_path": "/4O7dRWoZ8PhP8i2S4bqCJRz93i0.jpg",
             "release_date": "2025-07-02",
             "title": "국가 원수",
             "video": false,
-            "vote_average": 6.95,
-            "vote_count": 581
+            "vote_average": 7.0,
+            "vote_count": 583
         },
         {
             "adult": false,
@@ -450,17 +431,36 @@
             "original_language": "es",
             "original_title": "Control Room",
             "overview": "",
-            "popularity": 155.5054,
+            "popularity": 146.1681,
             "poster_path": "/1oPW1RuTy3CgJ1Nlv06AleOHz7a.jpg",
             "release_date": "2025-04-16",
             "title": "Control Room",
             "video": false,
-            "vote_average": 5.5,
-            "vote_count": 4
+            "vote_average": 5.0,
+            "vote_count": 5
         },
         {
             "adult": false,
-            "backdrop_path": "/qwK9soQmmJ7kRdjLZVXblw3g7AQ.jpg",
+            "backdrop_path": "/lSbblLngbeZIn6G4WXDcyQ6SLhw.jpg",
+            "genre_ids": [
+                28,
+                18
+            ],
+            "id": 911430,
+            "original_language": "en",
+            "original_title": "F1",
+            "overview": "한때 주목받는 유망주였지만 끔찍한 사고로 F1®에서 우승하지 못하고 한순간에 추락한 드라이버 소니 헤이스. 그의 오랜 동료인 루벤 세르반테스에게 레이싱 복귀를 제안받으며 최하위 팀인 APXGP에 합류한다.  그러나 팀 내 떠오르는 천재 드라이버 조슈아 피어스와 소니 헤이스의 갈등은 날이 갈수록 심해지고. 설상가상 우승을 향한 APXGP 팀의 전략 또한 번번이 실패하며 최하위권을 벗어나지 못하고 고전하는데···",
+            "popularity": 146.3497,
+            "poster_path": "/bvVoP1t2gNvmE9ccSrqR1zcGHGM.jpg",
+            "release_date": "2025-06-25",
+            "title": "F1 더 무비",
+            "video": false,
+            "vote_average": 7.614,
+            "vote_count": 927
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/a6bItEVaxgphpMswho1wVRerv4r.jpg",
             "genre_ids": [
                 28,
                 12,
@@ -471,13 +471,13 @@
             "original_language": "en",
             "original_title": "xXx",
             "overview": "싸이렌이 온 거리를 울려 퍼지며 요란한 추격씬이 벌어지는 도중 한 녀석이 콜벳를 몰고 다리를 돌진, 200미터 높이에서 자동차 번지를 시도한다. 짜릿한 곡예를 선보인 후 낙하산을 펴고 유유히 사라지는 녀석의 이름은 '젠더 케이지'. 인터넷에 생방송된 이 장면은 전세계 네티즌들에게 열렬한 환호를 받는다. 또 한 번의 멋진 프로젝트로 영웅 대접을 받는 젠더 케이지. 그러나 파티가 무르익을 무렵, 갑자기 들이닥친 특수부대는 그에게 신경 안정제를 쏜 후 잠들게 한다. 깨어난 곳은 알 수 없는 레스토랑. 어리둥절한 그 곳은 갑자기 강도들의 침입장으로 돌변하고, 단숨에 상황을 정리해버린 그에게 기븐스가 축하 인사를 전한다. 미국 비밀첩보국 NSA의 1차 테스트를 통과한 것. 이후 또 다시 잠에서 깨어난 곳은 비행기 안. 2번째 테스트로 콜럼비아 마약 밀매상의 아지트에 던져진 젠더 케이지. 때마침 콜럼비아 정부와 마약상들의 충돌로 아수라장이 된 그곳에서 살아남기 위한 치열한 전쟁이 펼쳐지는데...  상황종료 후 유유히 나타난 기븐스는 NSA의 테스트를 유일하게 통과한 그에게 비밀요원이 되어줄 것을 부탁한다. 단 그렇지 않을 경우는 감옥행뿐이라는 단서를 둔다. 젠더 케이지의 코드명은 트리플 X. 첫번째 임무지는 비밀요원의 무덤이라는 별칭을 가지고 있는 도시 프라하. 이제 얼떨결에 비밀요원이 되어버린 트리플 X의 위험한 여정이 시작되는데.",
-            "popularity": 142.5236,
+            "popularity": 139.1746,
             "poster_path": "/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg",
             "release_date": "2002-10-03",
             "title": "트리플 엑스",
             "video": false,
-            "vote_average": 5.956,
-            "vote_count": 4489
+            "vote_average": 6.0,
+            "vote_count": 4490
         },
         {
             "adult": false,
@@ -490,13 +490,32 @@
             "original_language": "en",
             "original_title": "Materialists",
             "overview": "잘나가는 커플매니저 루시. 고객의 결혼식에서 소위 ‘유니콘’이라 불리는 뉴욕 최고의 싱글남 해리에게 대시를 받는다. 같은 날, 같은 장소, 결혼식장에서 서빙 아르바이트를 하던 전남친 존과 마주치면서 루시는 예상하지 못한 고민이 시작되는데…",
-            "popularity": 141.1763,
+            "popularity": 130.9115,
             "poster_path": "/QhGn8LntSVpxFFSw7KU3SEscQm.jpg",
             "release_date": "2025-08-08",
             "title": "머티리얼리스트",
             "video": false,
-            "vote_average": 6.733,
-            "vote_count": 206
+            "vote_average": 6.781,
+            "vote_count": 215
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8aNNz9WYmxhnBxzWTt0nRI4F7rx.jpg",
+            "genre_ids": [
+                10749,
+                18
+            ],
+            "id": 1241634,
+            "original_language": "hi",
+            "original_title": "सैयारा",
+            "overview": "",
+            "popularity": 123.8471,
+            "poster_path": "/jymezcmEcFvlb037V4SSx8a4SMq.jpg",
+            "release_date": "2025-07-18",
+            "title": "सैयारा",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 70
         },
         {
             "adult": false,
@@ -510,54 +529,13 @@
             "original_language": "es",
             "original_title": "Nudus",
             "overview": "",
-            "popularity": 140.7299,
+            "popularity": 122.3267,
             "poster_path": "/e3E3V7TJkB2znDC2LLJuy1Um45Z.jpg",
             "release_date": "2024-04-11",
             "title": "Nudus",
             "video": false,
             "vote_average": 7.0,
             "vote_count": 2
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/8aNNz9WYmxhnBxzWTt0nRI4F7rx.jpg",
-            "genre_ids": [
-                10749,
-                18
-            ],
-            "id": 1241634,
-            "original_language": "hi",
-            "original_title": "सैयारा",
-            "overview": "",
-            "popularity": 131.1285,
-            "poster_path": "/jymezcmEcFvlb037V4SSx8a4SMq.jpg",
-            "release_date": "2025-07-18",
-            "title": "सैयारा",
-            "video": false,
-            "vote_average": 6.3,
-            "vote_count": 68
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/wcFV4uOdSbC0cSjs7ecAyOU6t59.jpg",
-            "genre_ids": [
-                16,
-                10751,
-                12,
-                14,
-                35
-            ],
-            "id": 947478,
-            "original_language": "en",
-            "original_title": "Diplodocus",
-            "overview": "",
-            "popularity": 130.9182,
-            "poster_path": "/9mnMMiwv20EL5weJrLZCaF8cM2u.jpg",
-            "release_date": "2024-10-04",
-            "title": "Diplodocus",
-            "video": false,
-            "vote_average": 7.2,
-            "vote_count": 9
         },
         {
             "adult": false,
@@ -570,13 +548,13 @@
             "original_language": "en",
             "original_title": "Saint Clare",
             "overview": "",
-            "popularity": 126.5922,
+            "popularity": 120.1139,
             "poster_path": "/aE0q4awk7zto3Eql4cAeJuVAns9.jpg",
             "release_date": "2025-07-18",
             "title": "세인트 클레어",
             "video": false,
             "vote_average": 5.2,
-            "vote_count": 12
+            "vote_count": 13
         },
         {
             "adult": false,
@@ -588,7 +566,7 @@
             "original_language": "ja",
             "original_title": "セックス・ライダー　濡れたハイウェイ",
             "overview": "",
-            "popularity": 116.6373,
+            "popularity": 104.011,
             "poster_path": "/gJNafT1asDVLV943q00mU0WpDl.jpg",
             "release_date": "1971-12-29",
             "title": "セックス・ライダー　濡れたハイウェイ",
@@ -607,13 +585,35 @@
             "original_language": "ja",
             "original_title": "女高生トリオ 性感試験",
             "overview": "",
-            "popularity": 115.2302,
+            "popularity": 126.3826,
             "poster_path": "/9GSLrU0aoR6Pi2FQ0ttXV2thSxJ.jpg",
             "release_date": "1977-02-23",
             "title": "女高生トリオ 性感試験",
             "video": false,
             "vote_average": 8.0,
             "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/wcFV4uOdSbC0cSjs7ecAyOU6t59.jpg",
+            "genre_ids": [
+                16,
+                10751,
+                12,
+                14,
+                35
+            ],
+            "id": 947478,
+            "original_language": "en",
+            "original_title": "Diplodocus",
+            "overview": "",
+            "popularity": 114.9235,
+            "poster_path": "/9mnMMiwv20EL5weJrLZCaF8cM2u.jpg",
+            "release_date": "2024-10-04",
+            "title": "Diplodocus",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 9
         },
         {
             "adult": false,
@@ -627,7 +627,7 @@
             "original_language": "ja",
             "original_title": "アニメ『怪獣８号』第１期総集編／同時上映「保科の休日」",
             "overview": "괴수로 가득한 일본에서 괴물 사체 처리 작업을 하고 있는 ‘히비노 카프카’는 소꿉친구이자 방위대의 떠오르는 스타 ‘아시로 미나’의 모습을 보고 다시 한번 꿈에 도전하기로 결심한다. 어느 날 갑작스럽게 강력한 “괴수 8호”로 변신하게 된 ‘카프카’. 후배 ‘이치카와 레노’의 도움을 받아 정체를 숨긴 채, 그는 오랜 꿈이었던 방위대 시험에 합격하였고 ‘미나’의 곁에 서는 것을 목표로 나아간다. 그러나 의문의 괴수가 방위대 기지를 공격하자, ‘카프카’는 절박한 상황 속에서 중요한 결정에 직면하게 되는데…",
-            "popularity": 113.5786,
+            "popularity": 105.2211,
             "poster_path": "/ziPpGchWdwiJaAXIbt4Tu0uNeBA.jpg",
             "release_date": "2025-05-07",
             "title": "괴수 8호: 미션 리컨",
@@ -645,13 +645,13 @@
             "original_language": "en",
             "original_title": "Bring Her Back",
             "overview": "아빠의 죽음 후 새엄마에게 입양된 남매 앤디와 파이퍼. 평화로운 집, 따뜻한 보금자리에서의 안식도 잠시 새엄마는 두 남매 사이를 갈라놓으며 앤디와 파이퍼를 혼란에 빠트린다. 고립된 집, 집 안 곳곳에서 발견되는 정체를 알 수 없는 의식의 흔적들, 새엄마가 숨긴 끔찍한 비밀이 드러나면서 남매를 극한의 공포 상황으로 몰아붙이기 시작하는데… 보지 말아야 할 것을 본 두 사람은 과연 살아남을 수 있을까!",
-            "popularity": 113.0787,
+            "popularity": 103.9807,
             "poster_path": "/A4W0yRN7Xy6JLIhRymIh5plK2Zj.jpg",
             "release_date": "2025-06-06",
             "title": "브링 허 백",
             "video": false,
             "vote_average": 7.5,
-            "vote_count": 343
+            "vote_count": 347
         },
         {
             "adult": false,
@@ -665,13 +665,13 @@
             "original_language": "zh",
             "original_title": "哪吒之魔童降世",
             "overview": "태을진인의 실수로 영주(선) 대신 마환(악)은 이정의 아들 나타로 환생한다. 3년 후, 천겁을 맞고 사라져야 할 운명을 타고난 나타는 마을을 혼란에 빠트려 사람들의 미움을 사게 된다. 세상에 파멸을 가져올 운명을 짊어진 나타의 마지막은 과연…",
-            "popularity": 99.739,
+            "popularity": 88.6592,
             "poster_path": "/ztWc4QvzEatqhGnQT98FsICc8rD.jpg",
             "release_date": "2019-07-26",
             "title": "나타지마동강세",
             "video": false,
-            "vote_average": 7.956,
-            "vote_count": 571
+            "vote_average": 7.953,
+            "vote_count": 572
         },
         {
             "adult": false,
@@ -685,13 +685,34 @@
             "original_language": "en",
             "original_title": "Mission: Impossible - The Final Reckoning",
             "overview": "디지털상의 모든 정보를 통제할 수 있는 사상 초유의 무기로 인해 전 세계 국가와 조직의 기능이 마비되고, 인류 전체가 위협받는 절체절명의 위기가 찾아온다. 이를 막을 수 있는 건 오직 존재 자체가 기밀인 에단 헌트와 그가 소속된 IMF뿐이다. 무기를 무력화하는 데 반드시 필요한 키를 손에 쥔 에단 헌트. 오랜 동료 루터와 벤지, 그리고 새로운 팀원이 된 그레이스, 파리, 드가와 함께 지금껏 경험했던 그 어떤 상대보다도 강력한 적에 맞서 모두의 운명을 건 불가능한 미션에 뛰어든다.",
-            "popularity": 96.9465,
+            "popularity": 90.7055,
             "poster_path": "/5Zxdorl5TharlI9S47YxoKzGCsi.jpg",
             "release_date": "2025-05-17",
             "title": "미션 임파서블: 파이널 레코닝",
             "video": false,
-            "vote_average": 7.164,
-            "vote_count": 971
+            "vote_average": 7.2,
+            "vote_count": 972
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zldvlkHlHKwrD3kNidMoSNN4Ir6.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751,
+                12
+            ],
+            "id": 1100998,
+            "original_language": "en",
+            "original_title": "SuperKlaus",
+            "overview": "",
+            "popularity": 93.1811,
+            "poster_path": "/8sgc5TA8xsi4wpKrf7XrFKscujQ.jpg",
+            "release_date": "2024-11-01",
+            "title": "SuperKlaus",
+            "video": false,
+            "vote_average": 6.0,
+            "vote_count": 5
         },
         {
             "adult": false,
@@ -705,51 +726,13 @@
             "original_language": "th",
             "original_title": "ปากกัด ตีนถีบ",
             "overview": "무시무시한 좀비 떼와 맞서 싸워야 하는 전직 무에타이 선수. 기술과 속도, 근성을 발휘해 여자 친구의 목숨을 구해야 한다.",
-            "popularity": 91.1639,
+            "popularity": 81.2174,
             "poster_path": "/wFIrbQv5Lpl6vKQmbrZMa9jhg5k.jpg",
             "release_date": "2025-07-09",
             "title": "지암",
             "video": false,
-            "vote_average": 6.588,
-            "vote_count": 125
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/cfAGn86j4LYzRCKWSkXPnMxoru6.jpg",
-            "genre_ids": [
-                18,
-                35
-            ],
-            "id": 1406607,
-            "original_language": "zh",
-            "original_title": "戏台",
-            "overview": "",
-            "popularity": 88.5899,
-            "poster_path": "/wSFGtkoz8SW6yIgu1Xvxs584QQt.jpg",
-            "release_date": "2025-07-12",
-            "title": "戏台",
-            "video": false,
-            "vote_average": 8.7,
-            "vote_count": 6
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/iHHWF01W2vNpjI8UzWh2F7tJEZp.jpg",
-            "genre_ids": [
-                28,
-                18
-            ],
-            "id": 1246369,
-            "original_language": "ja",
-            "original_title": "室町無頼",
-            "overview": "일본 역사상 전대미문의 대반란!\r 우리의 적은 국가권력이다!  1461년, 오닌의 난 직전의 교토.\r 대기근과 역병이 나라를 휩쓸며 도시는 혼란에 빠졌다.\r 인신매매와 노예 노동이 성행했고, 무능한 권력자들은 자신들의 안위만을 챙겼다.  자유로운 영혼의 ‘하스다 효에’는 자신의 무력과 재능으로\r 이 혼란한 시대를 헤쳐 나가면서도,\r 막부를 무너뜨리려는 야심을 품고 있었다.  그런 ‘효에’의 눈에 띈 고아 ‘사이조’는\r 혹독한 수련 끝에 초인적인 실력을 갖춘 전사로 거듭나고,\r ‘효에’는 ‘사이조’를 포함한 자신의 사람들과 함께 대규모 반란을 준비하는데...",
-            "popularity": 86.0817,
-            "poster_path": "/FclkEPCzkVFd7Y4tEDDnVhn4WL.jpg",
-            "release_date": "2025-06-25",
-            "title": "반란: 무로마치 부라이",
-            "video": false,
-            "vote_average": 9.2,
-            "vote_count": 9
+            "vote_average": 6.615,
+            "vote_count": 126
         },
         {
             "adult": false,
@@ -761,13 +744,13 @@
             "original_language": "en",
             "original_title": "Happy Gilmore",
             "overview": "다혈질의 말썽꾼 해피 길모어(Happy Gilmore: 아담 샌들러 분)는 프로 아이스하키 선수를 꿈꾸는 평범한 청년이다. 그런데 어느날, 해피는 우연히 골프 스윙 한번 한 것이 인연이 되어 자신의 의사와는 전혀 상관없이 필드에 나서게 된다. 골프의 경기규칙은 커녕 엉망인 자세로 난생 처음 필드에 나선 해피. 그가 아는 것은 단 한 가지뿐. 돈을 벌어 할머니의 집을 다시 되찾아야 한다는 것이다. 그런데 그가 믿는 건 엄청난 괴력의 어깨인데, 한번 스윙을 했다하면 400야드 지점까지 논스톱이다. 비록 경기 자체는 엉망이지만 엄청난 괴력의 소유자인 해피의 플레이에 매료된 관중들은 열광하고, 그는 계속 승리를 거두며 승승장구한다. 결국 해피는 매스컴의 주목을 받으며, 프로 골프대회에까지 나가게 된다. 한편, 프로 골프대회에서 우승후보로 주목받고 있는 슈터 맥가빈(Shooter McGavin: 크리스토퍼 맥도날드 분)은 해피를 저지하려는 음모를 꾸민다.",
-            "popularity": 85.6721,
+            "popularity": 90.1509,
             "poster_path": "/epFP29rGrLPseuKxpz3mGKr23Do.jpg",
             "release_date": "1997-02-14",
             "title": "해피 길모어",
             "video": false,
             "vote_average": 6.655,
-            "vote_count": 2902
+            "vote_count": 2909
         },
         {
             "adult": false,
@@ -783,13 +766,13 @@
             "original_language": "en",
             "original_title": "A Minecraft Movie",
             "overview": "왕년의 게임 챔피언이었지만 지금은 폐업 직전의 게임샵 주인이 된 '개릿'과 엄마를 잃고 낯선 동네로 이사 온 남매 '헨리'와 '나탈리' 그리고 그들을 돕는 부동산 중개업자 '던'. 이들은 ‘개릿’이 수집한 ‘큐브’가 내뿜는 신비한 빛을 따라가다 어느 폐광 속에 열린 포털을 통해 미지의 공간으로 빨려들어간다. 산과 나무, 구름과 달, 심지어 꿀벌까지 상상하는 모든 것이 네모난 현실이 되는 이곳은 바로 ‘오버월드’. 일찍이 이 세계로 넘어와 완벽하게 적응한 ‘스티브’를 만난 네 사람은 지하세계 ‘네더’를 다스리는 마법사 ‘말고샤’의 침공으로 ‘오버월드’가 위험에 빠졌다는 사실을 알게 된다. 현실 세계로 돌아가기 위해서는 일단 살아남아야 하는 법! 다섯 명의 ‘동글이’들은 ‘오버월드’를 구하기 위해 힘을 합치게 되는데…",
-            "popularity": 85.3503,
+            "popularity": 84.0783,
             "poster_path": "/k5aQ2TqKcQFwPoXHkpAGoKNVDLZ.jpg",
             "release_date": "2025-04-26",
             "title": "A MINECRAFT MOVIE 마인크래프트 무비",
             "video": false,
-            "vote_average": 6.446,
-            "vote_count": 2127
+            "vote_average": 6.4,
+            "vote_count": 2128
         },
         {
             "adult": false,
@@ -807,8 +790,8 @@
             "release_date": "2025-04-09",
             "title": "아마추어",
             "video": false,
-            "vote_average": 6.992,
-            "vote_count": 956
+            "vote_average": 6.994,
+            "vote_count": 959
         },
         {
             "adult": false,
@@ -832,63 +815,22 @@
         },
         {
             "adult": false,
-            "backdrop_path": "/vNUwK5P42m81uG57kKI1WxSZwIQ.jpg",
+            "backdrop_path": "/iHHWF01W2vNpjI8UzWh2F7tJEZp.jpg",
             "genre_ids": [
-                35,
-                10749
+                28,
+                18
             ],
-            "id": 1403735,
-            "original_language": "te",
-            "original_title": "లైలా",
-            "overview": "",
-            "popularity": 71.6851,
-            "poster_path": "/l4gsNxFPGpzbq0D6QK1a8vO1lBz.jpg",
-            "release_date": "2025-02-14",
-            "title": "లైలా",
+            "id": 1246369,
+            "original_language": "ja",
+            "original_title": "室町無頼",
+            "overview": "일본 역사상 전대미문의 대반란!\r 우리의 적은 국가권력이다!  1461년, 오닌의 난 직전의 교토.\r 대기근과 역병이 나라를 휩쓸며 도시는 혼란에 빠졌다.\r 인신매매와 노예 노동이 성행했고, 무능한 권력자들은 자신들의 안위만을 챙겼다.  자유로운 영혼의 ‘하스다 효에’는 자신의 무력과 재능으로\r 이 혼란한 시대를 헤쳐 나가면서도,\r 막부를 무너뜨리려는 야심을 품고 있었다.  그런 ‘효에’의 눈에 띈 고아 ‘사이조’는\r 혹독한 수련 끝에 초인적인 실력을 갖춘 전사로 거듭나고,\r ‘효에’는 ‘사이조’를 포함한 자신의 사람들과 함께 대규모 반란을 준비하는데...",
+            "popularity": 78.0981,
+            "poster_path": "/FclkEPCzkVFd7Y4tEDDnVhn4WL.jpg",
+            "release_date": "2025-06-25",
+            "title": "반란: 무로마치 부라이",
             "video": false,
-            "vote_average": 5.8,
-            "vote_count": 5
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/9A0wQG38VdEu3DYh8HzXKXKhA6g.jpg",
-            "genre_ids": [
-                12,
-                35,
-                10751
-            ],
-            "id": 1287536,
-            "original_language": "en",
-            "original_title": "Dora and the Search for Sol Dorado",
-            "overview": "",
-            "popularity": 69.7567,
-            "poster_path": "/r3d6u2n7iPoWNsSWwlJJWrDblOH.jpg",
-            "release_date": "2025-07-02",
-            "title": "Dora and the Search for Sol Dorado",
-            "video": false,
-            "vote_average": 6.818,
-            "vote_count": 77
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/zldvlkHlHKwrD3kNidMoSNN4Ir6.jpg",
-            "genre_ids": [
-                16,
-                35,
-                10751,
-                12
-            ],
-            "id": 1100998,
-            "original_language": "en",
-            "original_title": "SuperKlaus",
-            "overview": "",
-            "popularity": 93.1811,
-            "poster_path": "/8sgc5TA8xsi4wpKrf7XrFKscujQ.jpg",
-            "release_date": "2024-11-01",
-            "title": "SuperKlaus",
-            "video": false,
-            "vote_average": 6.0,
-            "vote_count": 5
+            "vote_average": 9.2,
+            "vote_count": 9
         },
         {
             "adult": false,
@@ -965,8 +907,27 @@
             "release_date": "2024-07-12",
             "title": "디스턴트",
             "video": false,
-            "vote_average": 6.426,
-            "vote_count": 176
+            "vote_average": 6.429,
+            "vote_count": 177
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/cfAGn86j4LYzRCKWSkXPnMxoru6.jpg",
+            "genre_ids": [
+                18,
+                35
+            ],
+            "id": 1406607,
+            "original_language": "zh",
+            "original_title": "戏台",
+            "overview": "",
+            "popularity": 74.2915,
+            "poster_path": "/wSFGtkoz8SW6yIgu1Xvxs584QQt.jpg",
+            "release_date": "2025-07-12",
+            "title": "戏台",
+            "video": false,
+            "vote_average": 8.7,
+            "vote_count": 6
         },
         {
             "adult": false,
@@ -1008,23 +969,22 @@
         },
         {
             "adult": false,
-            "backdrop_path": "/6WqqEjiycNvDLjbEClM1zCwIbDD.jpg",
+            "backdrop_path": "/vNUwK5P42m81uG57kKI1WxSZwIQ.jpg",
             "genre_ids": [
-                27,
-                53,
-                878
+                35,
+                10749
             ],
-            "id": 1100988,
-            "original_language": "en",
-            "original_title": "28 Years Later",
-            "overview": "28년 전 생물학 무기 연구소에서 세상을 재앙으로 몰아넣은 바이러스가 유출된 후, 일부 생존자들이 모여 철저히 격리된 채 살아가는 섬 홀리 아일랜드. 이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 스파이크는 어느 날 섬을 떠나 본토에 발을 들이게 되고 난생처음 바이러스에 잠식된 세상을 마주하게 된다. 변이된 바이러스는 10,228일의 시간 동안 감염자들을 더욱 충격적으로 진화시켰고 스파이크는 그 실체를 목격하며 극강의 공포에 휩싸이게 되는데...",
-            "popularity": 66.3536,
-            "poster_path": "/zRo90O0bTKJem1aDgVa6Sm0gthE.jpg",
-            "release_date": "2025-06-19",
-            "title": "28년 후",
+            "id": 1403735,
+            "original_language": "te",
+            "original_title": "లైలా",
+            "overview": "",
+            "popularity": 71.6851,
+            "poster_path": "/l4gsNxFPGpzbq0D6QK1a8vO1lBz.jpg",
+            "release_date": "2025-02-14",
+            "title": "లైలా",
             "video": false,
-            "vote_average": 7.1,
-            "vote_count": 627
+            "vote_average": 5.8,
+            "vote_count": 5
         },
         {
             "adult": false,
@@ -1062,26 +1022,48 @@
             "release_date": "2025-05-28",
             "title": "씨너스: 죄인들",
             "video": false,
-            "vote_average": 7.562,
+            "vote_average": 7.6,
             "vote_count": 2168
         },
         {
             "adult": false,
-            "backdrop_path": "/pMaUy5KhLydueZ4ybk9sKuqXQFI.jpg",
+            "backdrop_path": "/9A0wQG38VdEu3DYh8HzXKXKhA6g.jpg",
             "genre_ids": [
-                27
+                12,
+                35,
+                10751
             ],
-            "id": 1357933,
+            "id": 1287536,
             "original_language": "en",
-            "original_title": "The Cellar",
-            "overview": "심적 고통을 겪던 아비가일이 목사 가브리엘의 권유로 한 교회 모임에 나간 후 기억을 잃은 채 감옥 같은 정체불명의 공간에서 깨어나게 되고 그곳을 탈출한 그녀가 복잡한 지하 미로 속을 헤매며 파충류의 눈과 기괴한 가면을 쓴 신도들을 마주하게 되면서 벌어지는 이야기",
-            "popularity": 55.5564,
-            "poster_path": "/tNUzN0zqewZEmvnmyFSiGUKUS82.jpg",
-            "release_date": "2025-06-19",
-            "title": "겟 아웃: 셀러",
+            "original_title": "Dora and the Search for Sol Dorado",
+            "overview": "",
+            "popularity": 69.7567,
+            "poster_path": "/r3d6u2n7iPoWNsSWwlJJWrDblOH.jpg",
+            "release_date": "2025-07-02",
+            "title": "Dora and the Search for Sol Dorado",
             "video": false,
-            "vote_average": 7.6,
-            "vote_count": 10
+            "vote_average": 6.8,
+            "vote_count": 77
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6WqqEjiycNvDLjbEClM1zCwIbDD.jpg",
+            "genre_ids": [
+                27,
+                53,
+                878
+            ],
+            "id": 1100988,
+            "original_language": "en",
+            "original_title": "28 Years Later",
+            "overview": "28년 전 생물학 무기 연구소에서 세상을 재앙으로 몰아넣은 바이러스가 유출된 후, 일부 생존자들이 모여 철저히 격리된 채 살아가는 섬 홀리 아일랜드. 이곳에서 태어나 한 번도 섬 밖을 나가 본 적 없는 소년 스파이크는 어느 날 섬을 떠나 본토에 발을 들이게 되고 난생처음 바이러스에 잠식된 세상을 마주하게 된다. 변이된 바이러스는 10,228일의 시간 동안 감염자들을 더욱 충격적으로 진화시켰고 스파이크는 그 실체를 목격하며 극강의 공포에 휩싸이게 되는데...",
+            "popularity": 66.3536,
+            "poster_path": "/zRo90O0bTKJem1aDgVa6Sm0gthE.jpg",
+            "release_date": "2025-06-19",
+            "title": "28년 후",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 630
         },
         {
             "adult": false,
@@ -1197,7 +1179,7 @@
             "release_date": "2025-05-08",
             "title": "Mamá Reinventada",
             "video": false,
-            "vote_average": 8.1,
+            "vote_average": 8.067,
             "vote_count": 15
         },
         {
@@ -1218,27 +1200,8 @@
             "release_date": "2024-11-27",
             "title": "모아나 2",
             "video": false,
-            "vote_average": 7.067,
-            "vote_count": 2587
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/zYnbFFXPe4IfCtFtaIWigYrdqLP.jpg",
-            "genre_ids": [
-                27,
-                9648
-            ],
-            "id": 675308,
-            "original_language": "ko",
-            "original_title": "호텔 레이크",
-            "overview": "유미가 어린 동생을 맡기기 위해 엄마의 친구인 경선의 호텔로 찾아간다. 두 자매를 가족처럼 반기는 호텔 레이크 사장 경선과 이상한 이야기만 늘어 놓는 유일한 메이드 예린. 그 곳에서 기이한 사건과 충격적인 비밀을 마주하게 되는데...",
-            "popularity": 53.7101,
-            "poster_path": "/hCr1FiejbRJBUjFZyZF5c8O9HGp.jpg",
-            "release_date": "2020-04-29",
-            "title": "호텔 레이크",
-            "video": false,
-            "vote_average": 6.4,
-            "vote_count": 23
+            "vote_average": 7.1,
+            "vote_count": 2588
         },
         {
             "adult": false,
@@ -1256,8 +1219,8 @@
             "release_date": "2025-07-18",
             "title": "84제곱미터",
             "video": false,
-            "vote_average": 6.381,
-            "vote_count": 102
+            "vote_average": 6.332,
+            "vote_count": 104
         },
         {
             "adult": false,
@@ -1292,8 +1255,8 @@
             "release_date": "2025-03-26",
             "title": "워킹맨",
             "video": false,
-            "vote_average": 6.7,
-            "vote_count": 1394
+            "vote_average": 6.699,
+            "vote_count": 1396
         },
         {
             "adult": false,
@@ -1316,28 +1279,6 @@
         },
         {
             "adult": false,
-            "backdrop_path": "/68TGPnvmZ21NBOoV5IUZ4fQDyvZ.jpg",
-            "genre_ids": [
-                10402,
-                12,
-                10749,
-                35,
-                10751
-            ],
-            "id": 1243341,
-            "original_language": "en",
-            "original_title": "Z-O-M-B-I-E-S 4: Dawn of the Vampires",
-            "overview": "새 좀비스 시리즈에서 좀비 제드와 치어리더 애디슨은 일라이자, 늑대 인간 윌라와 함께 뱀파이어 빅터와 데이워커 노바를 만난다. 레이번산 양쪽 세계에 사는 두 원수는 생존을 위해 종족의 평화를 이룰 방법을 찾는다.",
-            "popularity": 58.4176,
-            "poster_path": "/njbxe4maWgMT4nAj2MyyIFuSwxB.jpg",
-            "release_date": "2025-07-11",
-            "title": "좀비스 4: 뱀파이어의 등장",
-            "video": false,
-            "vote_average": 7.23,
-            "vote_count": 89
-        },
-        {
-            "adult": false,
             "backdrop_path": "/iTqw8QXIdMcPa20vmBCDpbdIReG.jpg",
             "genre_ids": [
                 53,
@@ -1355,6 +1296,28 @@
             "video": false,
             "vote_average": 8.1,
             "vote_count": 21
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/68TGPnvmZ21NBOoV5IUZ4fQDyvZ.jpg",
+            "genre_ids": [
+                10402,
+                12,
+                10749,
+                35,
+                10751
+            ],
+            "id": 1243341,
+            "original_language": "en",
+            "original_title": "Z-O-M-B-I-E-S 4: Dawn of the Vampires",
+            "overview": "새 좀비스 시리즈에서 좀비 제드와 치어리더 애디슨은 일라이자, 늑대 인간 윌라와 함께 뱀파이어 빅터와 데이워커 노바를 만난다. 레이번산 양쪽 세계에 사는 두 원수는 생존을 위해 종족의 평화를 이룰 방법을 찾는다.",
+            "popularity": 58.4176,
+            "poster_path": "/njbxe4maWgMT4nAj2MyyIFuSwxB.jpg",
+            "release_date": "2025-07-11",
+            "title": "좀비스 4: 뱀파이어의 등장",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 89
         },
         {
             "adult": false,
@@ -1392,8 +1355,8 @@
             "release_date": "2025-04-23",
             "title": "어카운턴트 2",
             "video": false,
-            "vote_average": 7.177,
-            "vote_count": 1166
+            "vote_average": 7.18,
+            "vote_count": 1169
         },
         {
             "adult": false,
@@ -1411,6 +1374,24 @@
             "title": "性教育ママ",
             "video": false,
             "vote_average": 5.55,
+            "vote_count": 10
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/pMaUy5KhLydueZ4ybk9sKuqXQFI.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 1357933,
+            "original_language": "en",
+            "original_title": "The Cellar",
+            "overview": "심적 고통을 겪던 아비가일이 목사 가브리엘의 권유로 한 교회 모임에 나간 후 기억을 잃은 채 감옥 같은 정체불명의 공간에서 깨어나게 되고 그곳을 탈출한 그녀가 복잡한 지하 미로 속을 헤매며 파충류의 눈과 기괴한 가면을 쓴 신도들을 마주하게 되면서 벌어지는 이야기",
+            "popularity": 55.5564,
+            "poster_path": "/tNUzN0zqewZEmvnmyFSiGUKUS82.jpg",
+            "release_date": "2025-06-19",
+            "title": "겟 아웃: 셀러",
+            "video": false,
+            "vote_average": 7.6,
             "vote_count": 10
         },
         {
@@ -1450,8 +1431,27 @@
             "release_date": "2025-05-08",
             "title": "클라운 인 어 콘필드",
             "video": false,
-            "vote_average": 6.317,
+            "vote_average": 6.3,
             "vote_count": 194
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zYnbFFXPe4IfCtFtaIWigYrdqLP.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 675308,
+            "original_language": "ko",
+            "original_title": "호텔 레이크",
+            "overview": "유미가 어린 동생을 맡기기 위해 엄마의 친구인 경선의 호텔로 찾아간다. 두 자매를 가족처럼 반기는 호텔 레이크 사장 경선과 이상한 이야기만 늘어 놓는 유일한 메이드 예린. 그 곳에서 기이한 사건과 충격적인 비밀을 마주하게 되는데...",
+            "popularity": 53.7101,
+            "poster_path": "/hCr1FiejbRJBUjFZyZF5c8O9HGp.jpg",
+            "release_date": "2020-04-29",
+            "title": "호텔 레이크",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 23
         },
         {
             "adult": false,
@@ -1470,7 +1470,7 @@
             "release_date": "2025-02-12",
             "title": "캡틴 아메리카: 브레이브 뉴 월드",
             "video": false,
-            "vote_average": 6.037,
+            "vote_average": 6.0,
             "vote_count": 2438
         },
         {
@@ -1511,8 +1511,8 @@
             "release_date": "2025-07-10",
             "title": "브릭",
             "video": false,
-            "vote_average": 5.798,
-            "vote_count": 377
+            "vote_average": 5.784,
+            "vote_count": 379
         },
         {
             "adult": false,
@@ -1531,8 +1531,8 @@
             "release_date": "2025-02-14",
             "title": "'더 캐니언' - The Gorge",
             "video": false,
-            "vote_average": 7.723,
-            "vote_count": 2840
+            "vote_average": 7.7,
+            "vote_count": 2841
         },
         {
             "adult": false,
@@ -1605,7 +1605,7 @@
             "title": "쇼생크 탈출",
             "video": false,
             "vote_average": 8.712,
-            "vote_count": 28602
+            "vote_count": 28603
         },
         {
             "adult": false,
@@ -1644,7 +1644,7 @@
             "title": "판타스틱 4",
             "video": false,
             "vote_average": 5.793,
-            "vote_count": 9565
+            "vote_count": 9566
         },
         {
             "adult": false,
@@ -1684,8 +1684,8 @@
             "release_date": "2025-01-01",
             "title": "수퍼 소닉 3",
             "video": false,
-            "vote_average": 7.674,
-            "vote_count": 2809
+            "vote_average": 7.7,
+            "vote_count": 2808
         },
         {
             "adult": false,
@@ -1705,7 +1705,7 @@
             "title": "인터스텔라",
             "video": false,
             "vote_average": 8.458,
-            "vote_count": 37523
+            "vote_count": 37526
         },
         {
             "adult": false,
@@ -1765,7 +1765,7 @@
             "title": "데드풀과 울버린",
             "video": false,
             "vote_average": 7.585,
-            "vote_count": 7523
+            "vote_count": 7524
         },
         {
             "adult": false,
@@ -1845,7 +1845,7 @@
             "title": "나는 네가 지난 여름에 한 일을 알고 있다",
             "video": false,
             "vote_average": 5.9,
-            "vote_count": 102
+            "vote_count": 106
         },
         {
             "adult": false,
@@ -1942,7 +1942,7 @@
             "release_date": "2025-03-19",
             "title": "백설공주",
             "video": false,
-            "vote_average": 4.295,
+            "vote_average": 4.3,
             "vote_count": 1297
         },
         {
@@ -2033,8 +2033,8 @@
             "release_date": "2025-05-27",
             "title": "언틸 던: 무한루프 데스게임",
             "video": false,
-            "vote_average": 6.5,
-            "vote_count": 860
+            "vote_average": 6.548,
+            "vote_count": 862
         },
         {
             "adult": false,
@@ -2095,7 +2095,7 @@
             "title": "슈퍼배드 4",
             "video": false,
             "vote_average": 7.0,
-            "vote_count": 2855
+            "vote_count": 2856
         },
         {
             "adult": false,
@@ -2114,7 +2114,7 @@
             "title": "해리 포터와 마법사의 돌",
             "video": false,
             "vote_average": 7.902,
-            "vote_count": 28427
+            "vote_count": 28429
         },
         {
             "adult": false,
@@ -2193,8 +2193,8 @@
             "release_date": "2024-06-12",
             "title": "인사이드 아웃 2",
             "video": false,
-            "vote_average": 7.6,
-            "vote_count": 6009
+            "vote_average": 7.553,
+            "vote_count": 6011
         },
         {
             "adult": false,
@@ -2214,26 +2214,6 @@
             "video": false,
             "vote_average": 6.5,
             "vote_count": 2
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/czG3u1h2s67XajoIF7sEXGeqTjr.jpg",
-            "genre_ids": [
-                27,
-                878,
-                53
-            ],
-            "id": 1103731,
-            "original_language": "en",
-            "original_title": "In Vitro",
-            "overview": "",
-            "popularity": 30.3872,
-            "poster_path": "/oADha0l3dCm68rQfFL2AvZPs8pl.jpg",
-            "release_date": "2025-03-27",
-            "title": "In Vitro",
-            "video": false,
-            "vote_average": 7.8,
-            "vote_count": 6
         },
         {
             "adult": false,
@@ -2275,7 +2255,7 @@
             "title": "드래곤 길들이기 2",
             "video": false,
             "vote_average": 7.675,
-            "vote_count": 9960
+            "vote_count": 9961
         },
         {
             "adult": false,
@@ -2294,8 +2274,8 @@
             "release_date": "2024-12-18",
             "title": "무파사: 라이온 킹",
             "video": false,
-            "vote_average": 7.367,
-            "vote_count": 2281
+            "vote_average": 7.4,
+            "vote_count": 2282
         },
         {
             "adult": false,
@@ -2314,8 +2294,8 @@
             "release_date": "2024-11-13",
             "title": "글래디에이터 II",
             "video": false,
-            "vote_average": 6.681,
-            "vote_count": 3702
+            "vote_average": 6.7,
+            "vote_count": 3703
         },
         {
             "adult": false,
@@ -2339,7 +2319,7 @@
         },
         {
             "adult": false,
-            "backdrop_path": "/jITFb2I3GwpQ5DGDvkg2m1Pc3WB.jpg",
+            "backdrop_path": "/pN3eaCl3sqwrerU8UNdp40F2mK0.jpg",
             "genre_ids": [
                 878,
                 12,
@@ -2375,7 +2355,7 @@
             "title": "어벤져스",
             "video": false,
             "vote_average": 7.781,
-            "vote_count": 32533
+            "vote_count": 32538
         },
         {
             "adult": false,
@@ -2395,7 +2375,7 @@
             "title": "판타스틱 4: 실버 서퍼의 위협",
             "video": false,
             "vote_average": 5.615,
-            "vote_count": 8048
+            "vote_count": 8051
         },
         {
             "adult": false,
@@ -2432,28 +2412,8 @@
             "release_date": "2025-01-02",
             "title": "Kayara",
             "video": false,
-            "vote_average": 7.577,
-            "vote_count": 91
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/op3qmNhvwEvyT7UFyPbIfQmKriB.jpg",
-            "genre_ids": [
-                28,
-                14,
-                12
-            ],
-            "id": 324544,
-            "original_language": "en",
-            "original_title": "In the Lost Lands",
-            "overview": "여왕은 강력하고 두려운 마법사 그레이 앨리스를 잃어버린 땅의 유령이 들끓는 황야로 보내 마법의 힘을 찾게 합니다. 그곳에서 그녀와 그녀의 안내자인 방랑자 보이스는 인간과 악마를 따돌리고 싸워야 합니다.",
-            "popularity": 32.178,
-            "poster_path": "/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
-            "release_date": "2025-02-27",
-            "title": "인 더 로스트 랜즈",
-            "video": false,
-            "vote_average": 6.493,
-            "vote_count": 562
+            "vote_average": 7.603,
+            "vote_count": 92
         },
         {
             "adult": false,
@@ -2574,7 +2534,7 @@
             "title": "와일드 로봇",
             "video": false,
             "vote_average": 8.317,
-            "vote_count": 5201
+            "vote_count": 5203
         },
         {
             "adult": false,
@@ -2594,7 +2554,7 @@
             "title": "크레이븐 더 헌터",
             "video": false,
             "vote_average": 6.5,
-            "vote_count": 1891
+            "vote_count": 1892
         },
         {
             "adult": false,
@@ -2614,7 +2574,7 @@
             "title": "서브스턴스",
             "video": false,
             "vote_average": 7.1,
-            "vote_count": 4883
+            "vote_count": 4884
         },
         {
             "adult": false,
@@ -2656,8 +2616,8 @@
             "release_date": "2023-05-17",
             "title": "분노의 질주: 라이드 오어 다이",
             "video": false,
-            "vote_average": 7.0,
-            "vote_count": 5969
+            "vote_average": 7.036,
+            "vote_count": 5970
         },
         {
             "adult": false,
@@ -2762,6 +2722,26 @@
         },
         {
             "adult": false,
+            "backdrop_path": "/op3qmNhvwEvyT7UFyPbIfQmKriB.jpg",
+            "genre_ids": [
+                28,
+                14,
+                12
+            ],
+            "id": 324544,
+            "original_language": "en",
+            "original_title": "In the Lost Lands",
+            "overview": "여왕은 강력하고 두려운 마법사 그레이 앨리스를 잃어버린 땅의 유령이 들끓는 황야로 보내 마법의 힘을 찾게 합니다. 그곳에서 그녀와 그녀의 안내자인 방랑자 보이스는 인간과 악마를 따돌리고 싸워야 합니다.",
+            "popularity": 32.178,
+            "poster_path": "/dDlfjR7gllmr8HTeN6rfrYhTdwX.jpg",
+            "release_date": "2025-02-27",
+            "title": "인 더 로스트 랜즈",
+            "video": false,
+            "vote_average": 6.5,
+            "vote_count": 562
+        },
+        {
+            "adult": false,
             "backdrop_path": "/or5kDR8Ve3TtuPSdEf1X5NdQHyz.jpg",
             "genre_ids": [
                 28,
@@ -2778,27 +2758,7 @@
             "title": "판타스틱 4",
             "video": false,
             "vote_average": 4.431,
-            "vote_count": 6153
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/4rLaMBcCJ1pMq72vCulBMPsbAyh.jpg",
-            "genre_ids": [
-                27,
-                14,
-                35
-            ],
-            "id": 1153714,
-            "original_language": "en",
-            "original_title": "Death of a Unicorn",
-            "overview": "​\"그날 밤, 그들은 상상조차 못한 존재와 마주쳤다\"\r 과부인 엘리엇 킨터와 그의 딸 리들리는 캐나다 로키산맥으로 떠나는 길에 우연히 신비로운 새끼 유니콘과 충돌하게 된다. 이 사건으로 인해 그들은 엘리엇의 억만장자 상사인 오델 레오폴드의 별장에 도착하게 되고, 레오폴드 가족은 유니콘의 치유력을 탐내기 시작한다. 하지만 그들이 간과한 사실은, 유니콘의 부모가 그들의 새끼를 찾기 위해 다가오고 있다는 것인데...",
-            "popularity": 29.7878,
-            "poster_path": "/xWlF2i51zUq7BUq4iJte1g9NyIM.jpg",
-            "release_date": "2025-03-27",
-            "title": "데스 오브 유니콘",
-            "video": false,
-            "vote_average": 6.469,
-            "vote_count": 383
+            "vote_count": 6154
         },
         {
             "adult": false,
@@ -2819,7 +2779,7 @@
             "title": "다크 나이트",
             "video": false,
             "vote_average": 8.522,
-            "vote_count": 34132
+            "vote_count": 34135
         },
         {
             "adult": false,
@@ -2839,7 +2799,27 @@
             "title": "반지의 제왕: 반지 원정대",
             "video": false,
             "vote_average": 8.423,
-            "vote_count": 26192
+            "vote_count": 26193
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lCRLLe8kiwb99JOlkTPAfchhqwk.jpg",
+            "genre_ids": [
+                18,
+                10752,
+                36
+            ],
+            "id": 1500536,
+            "original_language": "zh",
+            "original_title": "南京照相馆",
+            "overview": "",
+            "popularity": 31.2116,
+            "poster_path": "/lwrANgpPEBmYZ59oExpCiuv34Ou.jpg",
+            "release_date": "2025-07-19",
+            "title": "南京照相馆",
+            "video": false,
+            "vote_average": 10.0,
+            "vote_count": 1
         },
         {
             "adult": false,
@@ -2956,6 +2936,46 @@
         },
         {
             "adult": false,
+            "backdrop_path": "/czG3u1h2s67XajoIF7sEXGeqTjr.jpg",
+            "genre_ids": [
+                27,
+                878,
+                53
+            ],
+            "id": 1103731,
+            "original_language": "en",
+            "original_title": "In Vitro",
+            "overview": "",
+            "popularity": 30.3872,
+            "poster_path": "/oADha0l3dCm68rQfFL2AvZPs8pl.jpg",
+            "release_date": "2025-03-27",
+            "title": "In Vitro",
+            "video": false,
+            "vote_average": 7.8,
+            "vote_count": 6
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4rLaMBcCJ1pMq72vCulBMPsbAyh.jpg",
+            "genre_ids": [
+                27,
+                14,
+                35
+            ],
+            "id": 1153714,
+            "original_language": "en",
+            "original_title": "Death of a Unicorn",
+            "overview": "​\"그날 밤, 그들은 상상조차 못한 존재와 마주쳤다\"\r 과부인 엘리엇 킨터와 그의 딸 리들리는 캐나다 로키산맥으로 떠나는 길에 우연히 신비로운 새끼 유니콘과 충돌하게 된다. 이 사건으로 인해 그들은 엘리엇의 억만장자 상사인 오델 레오폴드의 별장에 도착하게 되고, 레오폴드 가족은 유니콘의 치유력을 탐내기 시작한다. 하지만 그들이 간과한 사실은, 유니콘의 부모가 그들의 새끼를 찾기 위해 다가오고 있다는 것인데...",
+            "popularity": 29.7878,
+            "poster_path": "/xWlF2i51zUq7BUq4iJte1g9NyIM.jpg",
+            "release_date": "2025-03-27",
+            "title": "데스 오브 유니콘",
+            "video": false,
+            "vote_average": 6.478,
+            "vote_count": 384
+        },
+        {
+            "adult": false,
             "backdrop_path": "/kYgQzzjNis5jJalYtIHgrom0gOx.jpg",
             "genre_ids": [
                 16,
@@ -2975,7 +2995,7 @@
             "title": "쿵푸팬더 4",
             "video": false,
             "vote_average": 7.058,
-            "vote_count": 3151
+            "vote_count": 3152
         },
         {
             "adult": false,
@@ -3032,7 +3052,7 @@
             "title": "쥬라기 월드",
             "video": false,
             "vote_average": 6.699,
-            "vote_count": 20874
+            "vote_count": 20875
         },
         {
             "adult": false,
@@ -3092,7 +3112,7 @@
             "title": "쥬라기 월드: 폴른 킹덤",
             "video": false,
             "vote_average": 6.541,
-            "vote_count": 12216
+            "vote_count": 12217
         },
         {
             "adult": false,
@@ -3112,7 +3132,27 @@
             "title": "배트맨 대 슈퍼맨: 저스티스의 시작",
             "video": false,
             "vote_average": 5.983,
-            "vote_count": 18401
+            "vote_count": 18402
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/8rpDcsfLJypbO6vREc0547VKqEv.jpg",
+            "genre_ids": [
+                878,
+                12,
+                28
+            ],
+            "id": 76600,
+            "original_language": "en",
+            "original_title": "Avatar: The Way of Water",
+            "overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
+            "popularity": 28.5222,
+            "poster_path": "/u2aVXft5GLBQnjzWVNda7sdDpdu.jpg",
+            "release_date": "2022-12-14",
+            "title": "아바타: 물의 길",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 12707
         },
         {
             "adult": false,
@@ -3150,8 +3190,8 @@
             "release_date": "2023-01-25",
             "title": "메간",
             "video": false,
-            "vote_average": 7.058,
-            "vote_count": 4379
+            "vote_average": 7.057,
+            "vote_count": 4380
         },
         {
             "adult": false,
@@ -3171,7 +3211,7 @@
             "title": "인셉션",
             "video": false,
             "vote_average": 8.369,
-            "vote_count": 37717
+            "vote_count": 37718
         },
         {
             "adult": false,
@@ -3209,7 +3249,7 @@
             "title": "오시리스",
             "video": false,
             "vote_average": 6.3,
-            "vote_count": 19
+            "vote_count": 20
         },
         {
             "adult": false,
@@ -3326,8 +3366,8 @@
             "release_date": "1999-03-13",
             "title": "타이타닉",
             "video": false,
-            "vote_average": 7.906,
-            "vote_count": 26177
+            "vote_average": 7.905,
+            "vote_count": 26178
         },
         {
             "adult": false,
@@ -3423,7 +3463,7 @@
             "title": "어벤져스: 인피니티 워",
             "video": false,
             "vote_average": 8.236,
-            "vote_count": 30763
+            "vote_count": 30765
         },
         {
             "adult": false,
@@ -3443,7 +3483,7 @@
             "title": "위키드",
             "video": false,
             "vote_average": 6.927,
-            "vote_count": 2286
+            "vote_count": 2287
         },
         {
             "adult": false,
@@ -3462,8 +3502,8 @@
             "release_date": "2025-02-28",
             "title": "미키 17",
             "video": false,
-            "vote_average": 6.885,
-            "vote_count": 2459
+            "vote_average": 6.9,
+            "vote_count": 2461
         },
         {
             "adult": false,
@@ -3503,27 +3543,7 @@
             "title": "그레이의 50가지 그림자",
             "video": false,
             "vote_average": 5.885,
-            "vote_count": 12048
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/lCRLLe8kiwb99JOlkTPAfchhqwk.jpg",
-            "genre_ids": [
-                18,
-                10752,
-                36
-            ],
-            "id": 1500536,
-            "original_language": "zh",
-            "original_title": "南京照相馆",
-            "overview": "",
-            "popularity": 31.2116,
-            "poster_path": "/lwrANgpPEBmYZ59oExpCiuv34Ou.jpg",
-            "release_date": "2025-07-19",
-            "title": "南京照相馆",
-            "video": false,
-            "vote_average": 10.0,
-            "vote_count": 1
+            "vote_count": 12050
         },
         {
             "adult": false,
@@ -3663,26 +3683,6 @@
         },
         {
             "adult": false,
-            "backdrop_path": "/8rpDcsfLJypbO6vREc0547VKqEv.jpg",
-            "genre_ids": [
-                878,
-                12,
-                28
-            ],
-            "id": 76600,
-            "original_language": "en",
-            "original_title": "Avatar: The Way of Water",
-            "overview": "판도라 행성에서 제이크 설리와 네이티리가 이룬 가족이 겪게 되는 무자비한 위협과 살아남기 위해 떠나야 하는 긴 여정과 전투, 그리고 견뎌내야 할 상처에 대한 이야기를 그렸다. 살아남기 위해 설리 가족이 숲에서 바다로 터전을 옮기면서 겪게 되는 화합의 과정, 그리고 곳곳에서 도사리는 새로운 위협까지 역경 속에서 더 아름답게 펼쳐진다.",
-            "popularity": 28.5222,
-            "poster_path": "/u2aVXft5GLBQnjzWVNda7sdDpdu.jpg",
-            "release_date": "2022-12-14",
-            "title": "아바타: 물의 길",
-            "video": false,
-            "vote_average": 7.611,
-            "vote_count": 12705
-        },
-        {
-            "adult": false,
             "backdrop_path": "/hiKmpZMGZsrkA3cdce8a7Dpos1j.jpg",
             "genre_ids": [
                 35,
@@ -3699,7 +3699,7 @@
             "title": "기생충",
             "video": false,
             "vote_average": 8.499,
-            "vote_count": 19293
+            "vote_count": 19294
         },
         {
             "adult": false,
@@ -3758,7 +3758,25 @@
             "title": "메이즈 러너",
             "video": false,
             "vote_average": 7.191,
-            "vote_count": 17455
+            "vote_count": 17456
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3NCYVzeqLUKMhf5TaDlHol7BoTn.jpg",
+            "genre_ids": [
+                27
+            ],
+            "id": 1242011,
+            "original_language": "en",
+            "original_title": "Together",
+            "overview": "관계의 한계에 부딪힌 오래된 커플 팀과 밀리. 어느 날 서로의 몸이 점점 붙어버리기 시작하는데…",
+            "popularity": 25.4579,
+            "poster_path": "/paEzrPZCgNvUw6DwYlm6HQPXohc.jpg",
+            "release_date": "2025-07-05",
+            "title": "투게더",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 7
         },
         {
             "adult": false,
@@ -3816,8 +3834,8 @@
             "release_date": "2024-11-06",
             "title": "레드 원",
             "video": false,
-            "vote_average": 7.03,
-            "vote_count": 2586
+            "vote_average": 7.0,
+            "vote_count": 2587
         },
         {
             "adult": false,
@@ -3856,8 +3874,8 @@
             "release_date": "2025-03-19",
             "title": "플로우",
             "video": false,
-            "vote_average": 8.167,
-            "vote_count": 2151
+            "vote_average": 8.168,
+            "vote_count": 2152
         },
         {
             "adult": false,
@@ -3915,25 +3933,6 @@
             "video": false,
             "vote_average": 7.3,
             "vote_count": 3
-        },
-        {
-            "adult": false,
-            "backdrop_path": "/eP4RZSHliWu6lPT5WQyHr5ZZKuC.jpg",
-            "genre_ids": [
-                27,
-                878
-            ],
-            "id": 945961,
-            "original_language": "en",
-            "original_title": "Alien: Romulus",
-            "overview": "2142년, 부모 세대가 맞닥뜨렸던 암울한 미래를 피하려는 청년들이 더 나은 삶을 찾기 위해 식민지를 떠날 계획을 세운다. 하지만 버려진 우주 기지 로물루스에 도착한 이들은 악몽과도 같은 에이리언의 무자비한 공격에 쫓기기 시작한다. 그 누구도 그들의 절규를 들을 수 없는 우주 한가운데, 생존을 위한 치열한 사투를 벌여야 하는데...",
-            "popularity": 23.5206,
-            "poster_path": "/AmWTYg3RCMv7fbQxwCqrxiaUhkc.jpg",
-            "release_date": "2024-08-14",
-            "title": "에이리언: 로물루스",
-            "video": false,
-            "vote_average": 7.2,
-            "vote_count": 3817
         }
     ]
 }

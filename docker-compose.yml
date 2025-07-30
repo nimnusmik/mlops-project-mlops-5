@@ -1,0 +1,27 @@
+# ~/my-mlops-project/docker-compose.yml
+version: '3.8'
+
+services:
+  my-mlops-app:
+    image: python:3.11-bookworm
+    working_dir: /app
+    volumes:
+      - .:/app # <-- EC2 호스트의 현재 디렉토리(~/my-mlops-project)를 컨테이너의 /app으로 마운트
+    depends_on:
+      - my-mlops-postgres
+    environment:
+      DATABASE_URL: postgresql://user:password@my-mlops-postgres:5432/mydatabase
+
+  my-mlops-postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
