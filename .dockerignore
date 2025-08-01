@@ -98,7 +98,6 @@ celerybeat-schedule.*
 *.sage.py
 
 # Environments
-paths.env
 .env
 .venv
 env/
@@ -153,7 +152,6 @@ __pycache__/  # Python cache files
 *.cover       # Coverage reports
 nosetests.xml # Test results
 *.log         # Log files
-logs/
 
 # Other folders
 projects/

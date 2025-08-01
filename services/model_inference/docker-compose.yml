@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  my-mlops-db:
+    image: postgres:13
+    container_name: my-mlops-db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    networks:
+      - my-mlops-network
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  my-mlops:
+    build:
+      context: ../../
+      dockerfile: services/model_inference/Dockerfile
+    image: jkim1209/mlops-project:1.2.0
+    container_name: my-mlops
+    environment:
+      DB_HOST: my-mlops-db
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: root
+      DB_PORT: 5432
+
+      TMDB_API_KEY: ${TMDB_API_KEY}
+      TMDB_BASE_URL: ${TMDB_BASE_URL}
+
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_REGION: ${AWS_REGION}
+    networks:
+      - my-mlops-network
+    depends_on:
+      - my-mlops-db
+
+networks:
+  my-mlops-network:
+    driver: bridge
+
+volumes:
+  db_data:
