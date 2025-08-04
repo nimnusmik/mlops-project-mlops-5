@@ -62,7 +62,7 @@ class WatchLogDataset:
         return self.features[idx], self.labels[idx]
 
 
-def read_dataset(top_k_labels=50):
+def read_dataset(top_k_labels=100):
     path = os.path.join(project_path(), "data", "raw", "watch_log.csv")
     df = pd.read_csv(path)
     top_labels = df["content_id"].value_counts().nlargest(top_k_labels).index

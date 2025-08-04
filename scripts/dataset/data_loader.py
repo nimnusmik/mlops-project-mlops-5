@@ -4,7 +4,7 @@ import numpy as np
 
 
 class SimpleDataLoader:
-    def __init__(self, features, labels, batch_size=32, shuffle=True):
+    def __init__(self, features, labels, batch_size=16, shuffle=True):
         self.features = features
         self.labels = labels
         self.batch_size = batch_size

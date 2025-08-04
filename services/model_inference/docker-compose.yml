@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   my-mlops-db:
     image: postgres:13
@@ -19,7 +17,7 @@ services:
     build:
       context: ../../
       dockerfile: services/model_inference/dockerfile
-    image: jkim1209/mlops-project:1.2.0
+    image: jkim1209/mlops-project:1.2.5
     container_name: my-mlops
     environment:
       DB_HOST: my-mlops-db
