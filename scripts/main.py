@@ -2,6 +2,7 @@ import os
 import sys
 import fire
 import mlflow
+import numpy as np
 
 sys.path.append(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -12,33 +13,34 @@ from mlflow import MlflowClient
 from icecream import ic
 
 from scripts.utils.utils import init_seed, project_path, auto_increment_run_suffix
-
 from scripts.data_prepare.crawler import TMDBCrawler
 from scripts.data_prepare.preprocessing import TMDBPreProcessor
 from scripts.data_prepare.save_to_db import save_csv_to_db_main_function
 from scripts.data_prepare.s3_exporter import export_and_upload_data_to_s3
-
 from scripts.dataset.watch_log import get_datasets
 from scripts.dataset.data_loader import SimpleDataLoader
 from scripts.model.movie_predictor import MoviePredictor, model_save
 from scripts.train.train import train
 from scripts.evaluate.evaluate import evaluate
 from scripts.utils.enums import ModelTypes
+from scripts.inference.inference import (
+    inference, recommend_to_df, load_checkpoint, init_model
+)
+from scripts.postprocess.inference_to_db import write_db
+from scripts.postprocess.inference_to_local import save_inference_to_local
+from scripts.postprocess.inference_to_s3 import upload_inference_result_to_s3
 
-# 환경변수 경로설정
+# 환경변수 로드
 env_path = os.path.join(project_path(), '.env')
 paths_env_path = os.path.join(project_path(), '.paths', 'paths.env')
 load_dotenv(dotenv_path=env_path)
 load_dotenv(dotenv_path=paths_env_path)
 
 # 데이터 및 mlflow 경로설정
-data_raw_dir = os.path.join(project_path(), os.getenv("DATA_RAW_DIR", "data/raw"))
-os.environ["DATA_RAW_DIR"] = data_raw_dir
+os.environ["DATA_RAW_DIR"] = os.path.join(project_path(), os.getenv("DATA_RAW_DIR", "data/raw"))
+mlflow.set_tracking_uri(f"file:{os.path.join(project_path(), 'logs', 'mlflow')}")
 
-mlflow_log_path = os.path.join(project_path(), "logs", "mlflow")
-mlflow.set_tracking_uri(f"file:{mlflow_log_path}")
 
-# 데이터 수집 및 저장
 def run_popular_movie_pipeline():
     print("\n--- TMDB 인기 영화 크롤링 시작 ---")
     tmdb_crawler = TMDBCrawler()
@@ -56,14 +58,12 @@ def run_popular_movie_pipeline():
     tmdb_preprocessor.run()
     tmdb_preprocessor.save("watch_log")
 
-    watch_log_csv_path = os.path.join(data_raw_dir, "watch_log.csv")
+    watch_log_csv_path = os.path.join(os.environ["DATA_RAW_DIR"], "watch_log.csv")
     save_csv_to_db_main_function(watch_log_csv_path)
-
     export_and_upload_data_to_s3()
     print("\n--- 모든 파이프라인 실행 완료 ---")
 
 
-# 모델 학습 및 평가
 def get_next_run_name(experiment_name, base_name="movie-predictor", pad=3):
     client = MlflowClient()
     experiment = client.get_experiment_by_name(experiment_name)
@@ -80,7 +80,6 @@ def get_next_run_name(experiment_name, base_name="movie-predictor", pad=3):
 
 def run_train(model_name, batch_size=16, dim=256, num_epochs=100):
     init_seed()
-
     ModelTypes.validation(model_name)
     model_class = ModelTypes[model_name.upper()].value
 
@@ -136,16 +135,30 @@ def run_train(model_name, batch_size=16, dim=256, num_epochs=100):
         ic(decoded_predictions)
 
 
-# 전체 파이프라인 실행
+def run_inference(data=None, batch_size=16):
+    checkpoint = load_checkpoint()
+    model, scaler, label_encoder = init_model(checkpoint)
+
+    data = np.array(data or [])
+    recommend = inference(model, scaler, label_encoder, data, batch_size)
+    print("\nInference Result:", recommend)
+
+    recommend_df = recommend_to_df(recommend)
+    write_db(recommend_df, os.environ["DB_NAME"], "recommend")
+    save_inference_to_local(recommend_df, model_name="movie_predictor")
+    upload_inference_result_to_s3(recommend_df)
+
+
 def run_all_data_pipeline(model_name, batch_size=16, dim=256, num_epochs=100):
     run_popular_movie_pipeline()
     run_train(model_name, batch_size, dim, num_epochs)
+    run_inference(batch_size=batch_size)
 
 
-# CLI
 if __name__ == '__main__':
     fire.Fire({
         "prepare-data": run_popular_movie_pipeline,
         "train": run_train,
+        "inference": run_inference,
         "all": run_all_data_pipeline
     })
