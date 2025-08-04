@@ -1,42 +1,27 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  mlops-api-server:
+  mlops-api:
     build:
       context: ../../
-      dockerfile: services/api/dockerfile
-    image: jkim1209/mlops-api:1.0.0
-    container_name: mlops-api-server
+      dockerfile: services/api/Dockerfile
+    image: jkim1209/mlops-api:1.0.2
+    container_name: mlops-api
     ports:
       - "8000:8000"
+    env_file:
+      - ../../.env
     environment:
       DB_HOST: my-mlops-db
+      DB_PORT: 5432
       DB_NAME: postgres
       DB_USER: postgres
       DB_PASSWORD: root
-      DB_PORT: 5432
     networks:
       - my-mlops-network
     depends_on:
       - my-mlops-db
 
-  my-mlops-db:
-    image: postgres:13
-    container_name: my-mlops-db
-    environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: root
-    ports:
-      - "5432:5432"
-    networks:
-      - my-mlops-network
-    volumes:
-      - db_data:/var/lib/postgresql/data
-
 networks:
   my-mlops-network:
-    driver: bridge
-
-volumes:
-  db_data:
+    external: true # 이미 model_inference에서 만든 네트워크를 재사용
