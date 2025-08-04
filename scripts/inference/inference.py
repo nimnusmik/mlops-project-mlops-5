@@ -16,11 +16,13 @@ sys.path.append(
 import numpy as np
 import pandas as pd
 
+from dotenv import load_dotenv
 from scripts.utils.utils import model_dir, calculate_hash, read_hash
 from scripts.model.movie_predictor import MoviePredictor
 from scripts.dataset.watch_log import WatchLogDataset, get_datasets
 from scripts.dataset.data_loader import SimpleDataLoader
 from scripts.evaluate.evaluate import evaluate
+from scripts.postprocess.inference_to_db import write_db
 
 
 def load_checkpoint():
@@ -85,10 +87,8 @@ def inference(model, scaler, label_encoder, data, batch_size=1):
     return [dataset.decode_content_id(idx) for idx in predictions]
 
 
-if __name__ == '__main__':
-    checkpoint = load_checkpoint()
-    model, scaler, label_encoder = init_model(checkpoint)
-    recommend = inference(
-        model, scaler, label_encoder, data=np.array([]), batch_size=64
+def recommend_to_df(recommend):
+    return pd.DataFrame(
+        data=recommend,
+        columns="recommend_content_id".split()
     )
-    print(recommend)
