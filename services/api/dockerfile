@@ -15,9 +15,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ../../ ./
 
-# .dockerignore에서 제외된 폴더 중 필요한 폴더 명시
-COPY ../../models ./models
-COPY ../../data ./data
-
 # FastAPI 실행
 CMD ["uvicorn", "scripts.webapp:app", "--host", "0.0.0.0", "--port", "8000"]
