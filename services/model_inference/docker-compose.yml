@@ -18,7 +18,7 @@ services:
   my-mlops:
     build:
       context: ../../
-      dockerfile: services/model_inference/Dockerfile
+      dockerfile: services/model_inference/dockerfile
     image: jkim1209/mlops-project:1.2.0
     container_name: my-mlops
     environment:

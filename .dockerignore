@@ -152,6 +152,3 @@ __pycache__/  # Python cache files
 *.cover       # Coverage reports
 nosetests.xml # Test results
 *.log         # Log files
-
-# Other folders
-projects/
