@@ -1,0 +1,23 @@
+FROM python:3.11-slim
+
+WORKDIR /mlops-project
+
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY requirements-feast.txt .
+
+COPY services/feast/hadoop-aws-3.3.1.jar /opt/spark/jars/
+COPY services/feast/aws-java-sdk-bundle-1.11.901.jar /opt/spark/jars/
+
+# 디버그용 로그 추가
+RUN echo "Installing Feast requirements..." && \
+    pip install --no-cache-dir -r requirements-feast.txt -v && \
+    echo "✅ Feast 설치 완료!"
+
+COPY . .
+
+CMD ["tail", "-f", "/dev/null"]

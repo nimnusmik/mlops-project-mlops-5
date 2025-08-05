@@ -1,0 +1,22 @@
+project: mlops_feast_project
+provider: local
+
+offline_store:
+  type: spark
+  spark_conf:  
+    spark.hadoop.fs.s3a.access.key: "{{ AWS_ACCESS_KEY_ID }}"
+    spark.hadoop.fs.s3a.secret.key: "{{ AWS_SECRET_ACCESS_KEY }}"
+    # Spark가 S3와 연동하기 위한 jar 파일 경로를 추가 (로컬에서 Spark시 필요)
+    spark.hadoop.fs.s3a.impl: org.apache.hadoop.fs.s3a.S3AFileSystem
+    spark.driver.extraClassPath: "/opt/spark/jars/*"  
+
+
+online_store:
+  type: redis
+  connection_string: my-mlops-redis:6379
+
+registry:
+  registry_store_type: feast.infra.registry.sql.SqlRegistryStore
+  path: postgresql://postgres:root@my-mlops-db:5432/postgres
+
+entity_key_serialization_version: 2

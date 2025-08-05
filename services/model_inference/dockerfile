@@ -8,8 +8,11 @@ RUN apt-get update && apt-get install -y \
     gcc \
     && rm -rf /var/lib/apt/lists/*
 
+#RUN pip install --no-cache-dir \ 'feast[postgres,aws]==0.40.1' \ 'redis==4.2.0' \ 'hiredis==2.0.0' \ 'dask[dataframe]==2022.10.1' \
+#    'psycopg2-binary' \ 'fsspec==2023.12.2' \ 's3fs==2023.12.2' \ 'pandas==1.4.4' \ 'pyarrow==10.0.1' \'protobuf==4.21.12'
+
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt 
 
 COPY . .
 

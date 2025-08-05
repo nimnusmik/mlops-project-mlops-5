@@ -53,7 +53,7 @@ services:
   mlops-feast:
     build:
       context: ../../
-      dockerfile: services/model_inference/dockerfile
+      dockerfile: services/feast/DockerFile
     container_name: mlops-feast
     env_file:
       - ../../.env
@@ -64,8 +64,22 @@ services:
       - my-mlops-network
     volumes:
       - ../../:/mlops-project # 루트 폴더를 마운트
+    mem_limit: 4g  # 메모리가 죽어서 
     command: tail -f /dev/null
+    environment:
+        DB_HOST: my-mlops-db
+        DB_NAME: postgres
+        DB_USER: postgres
+        DB_PASSWORD: root
+        DB_PORT: 5432
 
+        TMDB_API_KEY: ${TMDB_API_KEY}
+        TMDB_BASE_URL: ${TMDB_BASE_URL}
+
+        S3_BUCKET_NAME: ${S3_BUCKET_NAME}
+        AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+        AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+        AWS_REGION: ${AWS_REGION}  
 
 networks:
   my-mlops-network:
