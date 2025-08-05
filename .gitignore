@@ -155,3 +155,7 @@ nosetests.xml # Test results
 
 # Other folders
 projects/
+
+# Ingnore .jar files
+services/feast/aws-java-sdk-bundle-1.11.901.jar
+services/feast/hadoop-aws-3.3.1.jar
