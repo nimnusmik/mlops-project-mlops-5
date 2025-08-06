@@ -20,6 +20,8 @@ class WatchLogDataset:
     def _preprocessing(self):
         # label encoding
         if self.label_encoder:
+            known_classes = set(self.label_encoder.classes_)
+            self.df = self.df[self.df["content_id"].isin(known_classes)].copy()
             self.df["content_id"] = self.label_encoder.transform(self.df["content_id"])
         else:
             self.label_encoder = LabelEncoder()
@@ -62,7 +64,7 @@ class WatchLogDataset:
         return self.features[idx], self.labels[idx]
 
 
-def read_dataset(top_k_labels=100):
+def read_dataset(top_k_labels=50):
     path = os.path.join(project_path(), "data", "raw", "watch_log.csv")
     df = pd.read_csv(path)
     top_labels = df["content_id"].value_counts().nlargest(top_k_labels).index

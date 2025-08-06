@@ -55,7 +55,7 @@ def save_csv_to_db_main_function(csv_path):
                 title TEXT,
                 original_title TEXT,
                 overview TEXT,
-                release_date DATE,
+                release_date TEXT,
                 genre_ids TEXT,
                 original_language TEXT,
                 backdrop_path TEXT,
@@ -77,7 +77,7 @@ def save_csv_to_db_main_function(csv_path):
             header=False,
             sep=',',
             quotechar='"',
-            quoting=csv.QUOTE_ALL
+            quoting=csv.QUOTE_ALL,
         )
         buffer.seek(0)
 
@@ -90,7 +90,7 @@ def save_csv_to_db_main_function(csv_path):
 
         copy_sql = f"""
         COPY watch_logs ({', '.join(csv_columns)})
-        FROM STDIN WITH (FORMAT CSV, HEADER FALSE, DELIMITER ',', QUOTE '"');
+        FROM STDIN WITH (FORMAT CSV, HEADER FALSE, DELIMITER ',', QUOTE '"', NULL '');
         """
         cur.copy_expert(copy_sql, buffer)
 

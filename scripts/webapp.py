@@ -13,11 +13,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
 from typing import List
+from sqlalchemy import text
 
 from scripts.inference.inference import (
     load_checkpoint, init_model, inference, recommend_to_df
 )
-from scripts.postprocess.inference_to_db import read_db
+from scripts.postprocess.inference_to_db import write_db, read_db, get_movie_metadata_by_ids, get_engine
 
 # FastAPI 앱 정의 및 CORS 설정
 app = FastAPI()
@@ -44,14 +45,11 @@ class InferenceInput(BaseModel):
     rating: float
     popularity: float
 
-class InferenceBatchInput(BaseModel):
-    batch: List[InferenceInput]
-
-
 # POST /predict
 @app.post("/predict")
 async def predict(input_data: InferenceInput):
     try:
+        # 1. 추천 수행
         data = np.array([
             input_data.user_id,
             input_data.content_id,
@@ -60,58 +58,55 @@ async def predict(input_data: InferenceInput):
             input_data.popularity
         ])
         result = inference(model, scaler, label_encoder, data)
+
+        # 2. 추천 결과 DB 저장
+        df_to_save = recommend_to_df(result)
+        write_db(df_to_save, os.getenv("DB_NAME"), "recommend")
+
+        # 3. 메타데이터 포함한 결과 리턴
+        metadata = get_movie_metadata_by_ids(os.getenv("DB_NAME"), result)
+        recommendations = [
+            {
+                "content_id": int(cid),
+                "title": metadata.get(int(cid), {}).get("title", ""),
+                "poster_url": metadata.get(int(cid), {}).get("poster_url", ""),
+                "overview": metadata.get(int(cid), {}).get("overview", "")
+            }
+            for cid in result
+        ]
+
         return {
             "user_id": input_data.user_id,
-            "recommended_content_id": result
+            "recommendations": recommendations
         }
+
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-
-# POST /predict/batch
-@app.post("/predict/batch")
-async def predict_batch(input_batch: InferenceBatchInput):
-    try:
-        input_list = input_batch.batch
-
-        data_list = []
-        user_ids = []
-
-        for item in input_list:
-            user_ids.append(item.user_id)
-            data_list.append([
-                item.user_id,
-                item.content_id,
-                item.watch_seconds,
-                item.rating,
-                item.popularity
-            ])
-
-        data = np.array(data_list)
-
-        results = inference(model, scaler, label_encoder, data, batch_size=len(data))
-
-        output = []
-        for uid, reco in zip(user_ids, results):
-            output.append({
-                "user_id": uid,
-                "recommended_content_id": reco
-            })
-
-        return {"batch_results": output}
-
-    except Exception as e:
-        import traceback
-        traceback.print_exc()
-        raise HTTPException(status_code=500, detail=str(e))
-    
 
 # GET /latest-recommendations
 @app.get("/latest-recommendations")
-async def latest_recommendations(k: int = 5):
+async def latest_recommendations(k: int = 10):
     try:
-        result = read_db("mlops", "recommend", k=k)
-        return {"recent_recommend_content_id": result}
+        content_ids = read_db(os.getenv("DB_NAME"), "recommend", k=k)
+        unique_ids = list(dict.fromkeys(content_ids))
+        if not unique_ids:
+            return {"recent_recommendations": []}
+
+        metadata = get_movie_metadata_by_ids("postgres", [int(cid) for cid in unique_ids])
+
+        recommendations = [
+            {
+                "content_id": cid,
+                "title": metadata.get(int(cid), {}).get("title", ""),
+                "poster_url": metadata.get(int(cid), {}).get("poster_url", ""),
+                "overview": metadata.get(int(cid), {}).get("overview", "")
+            }
+            for cid in unique_ids
+            if cid in metadata 
+        ]
+
+        return {"recent_recommendations": recommendations}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -124,6 +119,31 @@ async def available_ids():
         "available_content_ids": label_encoder.classes_.tolist()
     }
 
+# Get /available-contents
+@app.get("/available-contents")
+async def available_contents():
+    try:
+        engine = get_engine("postgres")
+        query = text("""
+            SELECT DISTINCT content_id, title, poster_path
+            FROM watch_logs
+            WHERE poster_path IS NOT NULL AND title IS NOT NULL
+            ORDER BY title ASC
+        """)
+        with engine.connect() as conn:
+            result = conn.execute(query).mappings().all() 
+            contents = [
+                {
+                    "content_id": int(row["content_id"]),
+                    "title": row["title"],
+                    "poster_url": f"https://image.tmdb.org/t/p/original{row['poster_path']}"
+                }
+                for row in result
+            ]
+        return {"available_contents": contents}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 # Get /health
 @app.get("/health")
@@ -134,4 +154,3 @@ async def health_check():
 # 서버 직접 실행 시
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
-

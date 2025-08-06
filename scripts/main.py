@@ -78,7 +78,7 @@ def get_next_run_name(experiment_name, base_name="movie-predictor", pad=3):
     return auto_increment_run_suffix(latest_run_name, pad=pad)
 
 
-def run_train(model_name, batch_size=16, dim=256, num_epochs=500):
+def run_train(model_name, batch_size=32, dim=256, num_epochs=1000):
     init_seed()
     ModelTypes.validation(model_name)
     model_class = ModelTypes[model_name.upper()].value
@@ -135,7 +135,7 @@ def run_train(model_name, batch_size=16, dim=256, num_epochs=500):
         ic(decoded_predictions)
 
 
-def run_inference(data=None, batch_size=16):
+def run_inference(data=None, batch_size=32):
     checkpoint = load_checkpoint()
     model, scaler, label_encoder = init_model(checkpoint)
 
@@ -149,7 +149,7 @@ def run_inference(data=None, batch_size=16):
     upload_inference_result_to_s3(recommend_df)
 
 
-def run_all_data_pipeline(model_name, batch_size=16, dim=256, num_epochs=500):
+def run_all_data_pipeline(model_name, batch_size=32, dim=256, num_epochs=1000):
     run_popular_movie_pipeline()
     run_train(model_name, batch_size, dim, num_epochs)
     run_inference(batch_size=batch_size)
