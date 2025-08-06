@@ -8,7 +8,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from scripts.utils.utils import project_path
-
+import sys
 
 # 환경 변수 경로 설정
 env_path = os.path.join(project_path(), '.env')
@@ -39,36 +39,37 @@ except Exception as e:
 
 s3_client = boto3.client('s3')
 
-def export_and_upload_data_to_s3():
-    print(f"Starting data export from {RAW_DATA_TABLE_NAME}...")
+def export_and_upload_data_to_s3(logger):
+    logger.write(f"Starting data export from {RAW_DATA_TABLE_NAME}...")
     try:
         if not S3_BUCKET_NAME:
-            print("Error: S3_BUCKET_NAME is not set. Please check your .env file.")
+            logger.write("Error: S3_BUCKET_NAME is not set. Please check your .env file.")
             return
 
         df = pd.read_sql_table(RAW_DATA_TABLE_NAME, engine)
-        print(f"Successfully read {len(df)} rows from {RAW_DATA_TABLE_NAME}.")
+        logger.write(f"Successfully read {len(df)} rows from {RAW_DATA_TABLE_NAME}.")
 
         if df.empty:
-            print("No data to export. Exiting.")
+            logger.write("No data to export. Exiting.")
             return
 
         local_parquet_path = f"/tmp/{RAW_DATA_TABLE_NAME}_backup.parquet"
         df.to_parquet(local_parquet_path, index=False)
-        print(f"Data saved locally to {local_parquet_path}")
+        logger.write(f"Data saved locally to {local_parquet_path}")
 
         today = datetime.now()
         s3_key = f"raw_data/{today.strftime('%Y/%m/%d')}/{RAW_DATA_TABLE_NAME}_{today.strftime('%Y%m%d%H%M%S')}.parquet"
 
         s3_client.upload_file(local_parquet_path, S3_BUCKET_NAME, s3_key)
-        print(f"Successfully uploaded {local_parquet_path} to s3://{S3_BUCKET_NAME}/{s3_key}")
+        logger.write(f"Successfully uploaded {local_parquet_path} to s3://{S3_BUCKET_NAME}/{s3_key}")
 
         os.remove(local_parquet_path)
-        print(f"Removed local temporary file: {local_parquet_path}")
+        logger.write(f"Removed local temporary file: {local_parquet_path}")
 
     except ClientError as e:
-        print(f"S3 Client Error: {e}")
+        logger.write(f"S3 Client Error: {e}")
     except Exception as e:
-        print(f"An error occurred during export or upload: {e}")
+        logger.write(f"An error occurred during export or upload: {e}")
     finally:
+        if engine:
         engine.dispose()

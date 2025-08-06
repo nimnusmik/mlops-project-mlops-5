@@ -2,6 +2,7 @@ import os
 import json
 import time
 import requests
+import sys 
 
 from scripts.utils.utils import project_path
 
@@ -9,16 +10,20 @@ from scripts.utils.utils import project_path
 class TMDBCrawler:
     def __init__(
         self,
+        logger,
         region="KR",
         language="ko-KR",
         image_language="ko",
         request_interval_seconds=0.4
     ):
+        self.logger = logger
         self._base_url = os.environ.get("TMDB_BASE_URL", "https://api.themoviedb.org/3")
         self._api_key = os.environ.get("TMDB_API_KEY")
 
         if not self._api_key:
-            raise ValueError("TMDB_API_KEY environment variable is not set. Please check your .env file.")
+            # logger.write를 사용하여 에러 메시지 기록
+            self.logger.write("TMDB_API_KEY environment variable is not set. Please check your .env file.", print_error=True)
+            raise ValueError("TMDB_API_KEY environment variable is not set. Please check your .")
 
         self._region = region
         self._language = language
@@ -34,14 +39,14 @@ class TMDBCrawler:
         }
         response = requests.get(f"{self._base_url}/movie/popular", params=params)
         if response.status_code != 200:
-            print(f"Error fetching popular movies: Status Code {response.status_code}, Response: {response.text}")
+            self.logger.writ(f"[ERROR] fetching popular movies: Status Code {response.status_code}, Response: {response.text}")
             return []
         return json.loads(response.text)["results"]
 
     def get_bulk_popular_movies(self, start_page, end_page):
         movies = []
         for page in range(start_page, end_page + 1):
-            print(f"Fetching popular movies page {page}...")
+            self.logger.write(f"Fetching popular movies page {page}...")
             page_movies = self.get_popular_movies(page)
             if page_movies:
                 movies.extend(page_movies)

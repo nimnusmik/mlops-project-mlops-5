@@ -3,6 +3,7 @@ import sys
 import fire
 import mlflow
 import numpy as np
+from datetime import datetime 
 
 sys.path.append(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -13,6 +14,7 @@ from mlflow import MlflowClient
 from icecream import ic
 
 from scripts.utils.utils import init_seed, project_path, auto_increment_run_suffix
+from scripts.utils.logger import Logger
 from scripts.data_prepare.crawler import TMDBCrawler
 from scripts.data_prepare.preprocessing import TMDBPreProcessor
 from scripts.data_prepare.save_to_db import save_csv_to_db_main_function
@@ -41,27 +43,27 @@ os.environ["DATA_RAW_DIR"] = os.path.join(project_path(), os.getenv("DATA_RAW_DI
 mlflow.set_tracking_uri(f"file:{os.path.join(project_path(), 'logs', 'mlflow')}")
 
 
-def run_popular_movie_pipeline():
+def run_popular_movie_pipeline(logger):
     print("\n--- TMDB 인기 영화 크롤링 시작 ---")
-    tmdb_crawler = TMDBCrawler()
+    tmdb_crawler = TMDBCrawler(logger=logger)
     crawled_movies = tmdb_crawler.get_bulk_popular_movies(start_page=1, end_page=10)
 
     if not crawled_movies:
-        print("크롤링된 영화 데이터가 없습니다. 파이프라인을 종료합니다.")
+        logger.write("크롤링된 영화 데이터가 없습니다. 파이프라인을 종료합니다.")
         return
 
     tmdb_crawler.save_movies_to_json_file(crawled_movies, "popular_movies_raw")
-    print(f"총 {len(crawled_movies)}개의 영화 데이터를 크롤링하여 저장했습니다.")
+    logger.write(f"총 {len(crawled_movies)}개의 영화 데이터를 크롤링하여 저장했습니다.")
 
-    print("\n--- 영화 데이터 전처리 및 시청 로그 생성 시작 ---")
-    tmdb_preprocessor = TMDBPreProcessor(crawled_movies)
+    logger.write("\n--- 영화 데이터 전처리 및 시청 로그 생성 시작 ---")
+    tmdb_preprocessor = TMDBPreProcessor(movies=crawled_movies, logger=logger)
     tmdb_preprocessor.run()
     tmdb_preprocessor.save("watch_log")
 
     watch_log_csv_path = os.path.join(os.environ["DATA_RAW_DIR"], "watch_log.csv")
-    save_csv_to_db_main_function(watch_log_csv_path)
-    export_and_upload_data_to_s3()
-    print("\n--- 모든 파이프라인 실행 완료 ---")
+    save_csv_to_db_main_function(watch_log_csv_path, logger)
+    export_and_upload_data_to_s3(logger)
+    logger.write("\n--- 모든 파이프라인 실행 완료 ---")
 
 
 def get_next_run_name(experiment_name, base_name="movie-predictor", pad=3):
@@ -78,15 +80,21 @@ def get_next_run_name(experiment_name, base_name="movie-predictor", pad=3):
     return auto_increment_run_suffix(latest_run_name, pad=pad)
 
 
+<<<<<<< Updated upstream
 def run_train(model_name, batch_size=32, dim=256, num_epochs=1000):
+=======
+def run_train(model_name, batch_size=16, dim=256, num_epochs=500, logger=None):
+    _logger = logger if logger else sys.stdout
+
+>>>>>>> Stashed changes
     init_seed()
     ModelTypes.validation(model_name)
     model_class = ModelTypes[model_name.upper()].value
 
     train_dataset, val_dataset, test_dataset = get_datasets()
-    train_loader = SimpleDataLoader(train_dataset.features, train_dataset.labels, batch_size=batch_size, shuffle=True)
-    val_loader = SimpleDataLoader(val_dataset.features, val_dataset.labels, batch_size=batch_size, shuffle=False)
-    test_loader = SimpleDataLoader(test_dataset.features, test_dataset.labels, batch_size=batch_size, shuffle=False)
+    train_loader = SimpleDataLoader(train_dataset.features, train_dataset.labels, logger=_logger, batch_size=batch_size, shuffle=True)
+    val_loader = SimpleDataLoader(val_dataset.features, val_dataset.labels, logger=_logger, batch_size=batch_size, shuffle=False)
+    test_loader = SimpleDataLoader(test_dataset.features, test_dataset.labels, logger=_logger, batch_size=batch_size, shuffle=False)
 
     model_params = {
         "input_dim": train_dataset.features_dim,
@@ -128,6 +136,7 @@ def run_train(model_name, batch_size=32, dim=256, num_epochs=1000):
             loss=train_loss,
             scaler=train_dataset.scaler,
             label_encoder=train_dataset.label_encoder,
+            logger=_logger
         )
         mlflow.log_artifact(save_path)
 
@@ -135,30 +144,72 @@ def run_train(model_name, batch_size=32, dim=256, num_epochs=1000):
         ic(decoded_predictions)
 
 
+<<<<<<< Updated upstream
 def run_inference(data=None, batch_size=32):
     checkpoint = load_checkpoint()
     model, scaler, label_encoder = init_model(checkpoint)
 
+=======
+def run_inference(data=None, batch_size=16, logger=None):
+    _logger = logger if logger else sys.stdout 
+    checkpoint = load_checkpoint(_logger)
+    model, scaler, label_encoder = init_model(checkpoint, _logger)
+ 
+>>>>>>> Stashed changes
     data = np.array(data or [])
-    recommend = inference(model, scaler, label_encoder, data, batch_size)
-    print("\nInference Result:", recommend)
+    recommend = inference(model, scaler, label_encoder, data, _logger, batch_size)
+    #print("\nInference Result:", recommend)
 
     recommend_df = recommend_to_df(recommend)
     write_db(recommend_df, os.environ["DB_NAME"], "recommend")
     save_inference_to_local(recommend_df, model_name="movie_predictor")
     upload_inference_result_to_s3(recommend_df)
 
+def run_all_data_pipeline(model_name, batch_size=16, dim=256, num_epochs=500, logger=None): 
+    _logger = logger if logger else sys.stdout  
 
+<<<<<<< Updated upstream
 def run_all_data_pipeline(model_name, batch_size=32, dim=256, num_epochs=1000):
     run_popular_movie_pipeline()
+=======
+    _logger.write("Running popular movie pipeline...")
+    run_popular_movie_pipeline(_logger)  
+    
+    _logger.write("Running train pipeline...")
+>>>>>>> Stashed changes
     run_train(model_name, batch_size, dim, num_epochs)
+    
+    _logger.write("Running inference pipeline...")
     run_inference(batch_size=batch_size)
 
 
 if __name__ == '__main__':
-    fire.Fire({
-        "prepare-data": run_popular_movie_pipeline,
-        "train": run_train,
-        "inference": run_inference,
-        "all": run_all_data_pipeline
-    })
+    # main.py 에서 실행되는 파일의 로그는 scripts/logs 폴더에 저장
+    log_dir = os.path.join(project_path(), os.getenv("LOGS_SCRIPTS_DIR", "logs/scripts"))
+    log_filename = datetime.now().strftime('main_pipeline_%Y%m%d_%H%M%S.log')
+    log_file_path = os.path.join(log_dir, log_filename)
+
+    logger = Logger(log_file_path, print_also=True)
+
+    try:
+        logger.start_redirect()  
+        logger.write("\n--- 메인 파이프라인 실행 시작 ---")
+        
+        fire.Fire({
+             #logger가 담긴 함수가 실행되지 않고 fire에 전달되어야 하기 때문에 람다 함수 사용
+            "prepare-data": lambda: run_popular_movie_pipeline(logger),
+            "train": lambda model_name, batch_size=16, dim=256, num_epochs=500: \
+                     run_train(model_name, batch_size, dim, num_epochs, logger),
+            "inference": lambda data=None, batch_size=16: run_inference(data, batch_size, logger),
+            "all": lambda model_name, batch_size=16, dim=256, num_epochs=500: \
+            run_all_data_pipeline(model_name, batch_size, dim, num_epochs, logger)
+        })
+        
+        logger.write("\n--- 메인 파이프라인 실행 완료 ---")
+
+    except Exception as e:
+        logger.write(f"메인 파이프라인 실행 중 오류 발생: {e}", print_error=True)
+
+    finally:
+        logger.stop_redirect()  
+        logger.close()  

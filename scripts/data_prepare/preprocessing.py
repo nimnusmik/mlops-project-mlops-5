@@ -4,13 +4,15 @@ import pandas as pd
 import os
 import json
 import csv
+import sys 
 
 from scripts.utils.utils import project_path
 
 
 class TMDBPreProcessor:
-    def __init__(self, movies: list, user_count=300, max_select_count=20):
+    def __init__(self, movies: list, logger, user_count=300, max_select_count=20):
         random.seed(0)
+        self.logger = logger
         self._movies = movies
         self._features = pd.DataFrame()
         self._users = list(range(1, user_count + 1))
@@ -102,27 +104,27 @@ class TMDBPreProcessor:
     def run(self):
         features = []
         if not self._movies:
-            print("Warning: No movies provided to TMDBPreProcessor. 'run' method will not generate features.")
+            self.logger.write("Warning: No movies provided to TMDBPreProcessor. 'run' method will not generate features.")
             self._features = pd.DataFrame()
             return
-        print(f"Preprocessing {len(self._movies)} movies for feature augmentation...")
+        self.logger.write(f"Preprocessing {len(self._movies)} movies for feature augmentation...")
         for movie in self._movies:
             features.extend(self.augmentation(movie))
         if not features:
-            print("Warning: No features generated after augmentation. Skipping selection.")
+            self.logger.write("Warning: No features generated after augmentation. Skipping selection.")
             self._features = pd.DataFrame()
             return
         selected_features = []
-        print(f"Generating watch logs for {len(self._users)} users from {len(features)} augmented features...")
+        self.logger.write(f"Generating watch logs for {len(self._users)} users from {len(features)} augmented features...")
         for user_id in self._users:
             selected_features.extend(self.selection(user_id, features))
         if not selected_features:
-            print("Warning: No watch logs generated after selection.")
+            self.logger.write("Warning: No watch logs generated after selection.")
             self._features = pd.DataFrame()
             return
         df = pd.DataFrame.from_records(selected_features)
         self._features = df
-        print(f"Successfully generated {len(self._features)} watch log entries.")
+        self.logger.write(f"Successfully generated {len(self._features)} watch log entries.")
 
     def save(self, filename):
         if not self._features.empty:
@@ -131,9 +133,9 @@ class TMDBPreProcessor:
 
             file_path = os.path.join(result_dir, f"{filename}.csv")
             self._features.to_csv(file_path, header=True, index=False, quoting=csv.QUOTE_ALL)
-            print(f"Successfully saved raw data to {file_path}")
+            self.logger.write(f"Successfully saved raw data to {file_path}")
         else:
-            print(f"No features to save for {filename}.")
+            self.logger.write(f"No features to save for {filename}.")
 
     @property
     def features(self):
