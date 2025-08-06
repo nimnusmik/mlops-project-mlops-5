@@ -24,6 +24,8 @@ services:
     depends_on:
       my-mlops-db:
         condition: service_healthy
+    volumes:  
+      - ../../logs:/mlops-project/logs
     restart: always
 
   my-mlops-db:

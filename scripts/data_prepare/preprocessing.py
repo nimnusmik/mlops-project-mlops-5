@@ -37,7 +37,7 @@ class TMDBPreProcessor:
         adult = movie.get("adult", False)
         video = movie.get("video", False)
         if movie_id is None:
-            print(f"Warning: Skipping augmentation for movie with no ID: {movie}")
+            print(f"[WARN] Skipping augmentation for movie with no ID: {movie}")
             return []
         count = int(pow(2, max(1, rating)))
         data = {
@@ -104,14 +104,14 @@ class TMDBPreProcessor:
     def run(self):
         features = []
         if not self._movies:
-            self.logger.write("Warning: No movies provided to TMDBPreProcessor. 'run' method will not generate features.")
+            self.logger.write("[WARN] No movies provided to TMDBPreProcessor. 'run' method will not generate features.")
             self._features = pd.DataFrame()
             return
         self.logger.write(f"Preprocessing {len(self._movies)} movies for feature augmentation...")
         for movie in self._movies:
             features.extend(self.augmentation(movie))
         if not features:
-            self.logger.write("Warning: No features generated after augmentation. Skipping selection.")
+            self.logger.write("[WARN] No features generated after augmentation. Skipping selection.")
             self._features = pd.DataFrame()
             return
         selected_features = []
@@ -119,7 +119,7 @@ class TMDBPreProcessor:
         for user_id in self._users:
             selected_features.extend(self.selection(user_id, features))
         if not selected_features:
-            self.logger.write("Warning: No watch logs generated after selection.")
+            self.logger.write("[WARN] No watch logs generated after selection.")
             self._features = pd.DataFrame()
             return
         df = pd.DataFrame.from_records(selected_features)
@@ -135,7 +135,7 @@ class TMDBPreProcessor:
             self._features.to_csv(file_path, header=True, index=False, quoting=csv.QUOTE_ALL)
             self.logger.write(f"Successfully saved raw data to {file_path}")
         else:
-            self.logger.write(f"No features to save for {filename}.")
+            self.logger.write(f"[WARN] No features to save for {filename}.")
 
     @property
     def features(self):

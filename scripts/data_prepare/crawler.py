@@ -22,8 +22,8 @@ class TMDBCrawler:
 
         if not self._api_key:
             # logger.write를 사용하여 에러 메시지 기록
-            self.logger.write("TMDB_API_KEY environment variable is not set. Please check your .env file.", print_error=True)
-            raise ValueError("TMDB_API_KEY environment variable is not set. Please check your .")
+            self.logger.write("[ERROR] TMDB_API_KEY environment variable is not set. Please check your .env file.", print_error=True)
+            raise ValueError("[ERROR] TMDB_API_KEY environment variable is not set. Please check your .")
 
         self._region = region
         self._language = language

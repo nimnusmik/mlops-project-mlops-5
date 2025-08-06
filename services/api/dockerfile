@@ -15,5 +15,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ../../ ./
 
+RUN chmod -R 777 /mlops-project/logs
+
 # FastAPI 실행
 CMD ["uvicorn", "scripts.webapp:app", "--host", "0.0.0.0", "--port", "8000"]

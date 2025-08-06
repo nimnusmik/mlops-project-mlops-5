@@ -3,13 +3,9 @@ import sys
 import numpy as np
 
 
-class SimpleDataLoader:
-<<<<<<< Updated upstream
-    def __init__(self, features, labels, batch_size=32, shuffle=True):
-=======
+class SimpleDataLoader: 
     def __init__(self, features, labels, logger, batch_size=16, shuffle=True):
         self.logger = logger
->>>>>>> Stashed changes
         self.features = features
         self.labels = labels
         self.batch_size = batch_size

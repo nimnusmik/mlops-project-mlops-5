@@ -1,11 +1,10 @@
 import os
-
 import numpy as np
 import datetime
 import pickle
-import sys
+import sys  
 
-from scripts.utils.utils import model_dir, save_hash
+from scripts.utils.utils import model_dir, save_hash  
 
 
 class MoviePredictor:
@@ -82,7 +81,7 @@ class MoviePredictor:
         self.bias3 = state_dict["bias3"]
 
 
-def model_save(model, model_params, epoch, loss, scaler, label_encoder, logger):
+def model_save(model, model_params, epoch, loss, scaler, label_encoder, logger): 
     save_dir = model_dir(model.name)
     os.makedirs(save_dir, exist_ok=True)
 
@@ -108,7 +107,7 @@ def model_save(model, model_params, epoch, loss, scaler, label_encoder, logger):
     with open(save_path, "wb") as f:
         pickle.dump(save_data, f)
 
-    logger.write(f"Model saved to {save_path}")
-    save_hash(save_path)
+    logger.write(f"모델 저장 완료: {save_path}") 
+    save_hash(save_path, logger)  
     
     return save_path

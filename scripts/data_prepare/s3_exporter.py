@@ -35,7 +35,7 @@ try:
     engine = create_engine(DATABASE_URL)
     print(f"PostgreSQL engine created for {DB_NAME} on {DB_HOST}")
 except Exception as e:
-    print(f"Error creating PostgreSQL engine: {e}")
+    print(f"[ERROR] error creating PostgreSQL engine: {e}")
 
 s3_client = boto3.client('s3')
 
@@ -43,7 +43,7 @@ def export_and_upload_data_to_s3(logger):
     logger.write(f"Starting data export from {RAW_DATA_TABLE_NAME}...")
     try:
         if not S3_BUCKET_NAME:
-            logger.write("Error: S3_BUCKET_NAME is not set. Please check your .env file.")
+            logger.write("[ERROR] S3_BUCKET_NAME is not set. Please check your .env file.")
             return
 
         df = pd.read_sql_table(RAW_DATA_TABLE_NAME, engine)
@@ -69,7 +69,7 @@ def export_and_upload_data_to_s3(logger):
     except ClientError as e:
         logger.write(f"S3 Client Error: {e}")
     except Exception as e:
-        logger.write(f"An error occurred during export or upload: {e}")
+        logger.write(f"[ERROR] An error occurred during export or upload: {e}")
     finally:
         if engine:
-        engine.dispose()
+            engine.dispose()
