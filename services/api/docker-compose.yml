@@ -6,7 +6,7 @@ services:
       context: ../../
       dockerfile: services/api/Dockerfile
       args:
-        EXCLUDE_FRONTEND: true
+        EXCLUDE_FRONTEND: "true"
     image: jkim1209/mlops-api:1.3.3
     container_name: my-mlops-api
     ports:
