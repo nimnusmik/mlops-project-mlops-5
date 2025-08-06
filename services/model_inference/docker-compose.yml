@@ -13,6 +13,8 @@ services:
       - my-mlops-network
     volumes:
       - db_data:/var/lib/postgresql/data
+      - ./logs/postgresql:/var/log/postgresql 
+
 
   my-mlops:
     build:
@@ -33,9 +35,7 @@ services:
     networks:
       - my-mlops-network
     depends_on:
-      - my-mlops-db
-    volumes:  
-      - ../../logs:/mlops-project/logs
+      - my-mlops-db 
 
 networks:
   my-mlops-network:

@@ -1,3 +1,4 @@
+
 import os
 import sys
 import fire
@@ -34,6 +35,7 @@ from scripts.postprocess.inference_to_s3 import upload_inference_result_to_s3
 from scripts.utils.utils import save_hash, read_hash, model_dir, calculate_hash  
 
 
+# .env 파일과 .paths/paths.env 파일을 모두 로드
 env_path = os.path.join(project_path(), '.env')
 paths_env_path = os.path.join(project_path(), '.paths', 'paths.env')
 load_dotenv(dotenv_path=env_path)
@@ -162,22 +164,43 @@ def run_inference(data=None, batch_size=16, logger=None):
     upload_inference_result_to_s3(recommend_df, logger=_logger)  
     _logger.write("추론 결과가 DB, 로컬, S3에 저장되었습니다.")  
 
-def run_all_data_pipeline(model_name, batch_size=16, dim=256, num_epochs=500, logger=None): 
-    _logger = logger if logger else sys.stdout  
- 
-    _logger.write("인기 영화 파이프라인 실행 중...")  
-    run_popular_movie_pipeline(_logger)  
+
+def run_all_data_pipeline(model_name, batch_size=16, dim=256, num_epochs=500): 
+    # 단계별 로그를 위한 폴더 생성 및 로거 초기화
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+
+    # 1. 데이터 준비(pipeline) 로그
+    log_dir_pipeline = os.path.join(project_path(), os.getenv("LOGS_PIPELINE_DIR", "logs/scripts/pipeline"))
+    os.makedirs(log_dir_pipeline, exist_ok=True)
+    logger_pipeline = Logger(os.path.join(log_dir_pipeline, f'main_pipeline_{timestamp}.log'), print_also=True)
     
-    _logger.write("학습 파이프라인 실행 중...")  
-    run_train(model_name, batch_size, dim, num_epochs, _logger) 
+    logger_pipeline.write("--- 인기 영화 파이프라인 실행 중... ---")  
+    run_popular_movie_pipeline(logger_pipeline)  
+    logger_pipeline.close()
     
-    _logger.write("추론 파이프라인 실행 중...")  
-    run_inference(batch_size=batch_size, logger=_logger)
+    # 2. 학습(train) 로그
+    log_dir_train = os.path.join(project_path(), os.getenv("LOGS_TRAIN_DIR", "logs/scripts/train"))
+    os.makedirs(log_dir_train, exist_ok=True)
+    logger_train = Logger(os.path.join(log_dir_train, f'train_run_{timestamp}.log'), print_also=True)
+    
+    logger_train.write("--- 학습 파이프라인 실행 중... ---")  
+    run_train(model_name, batch_size, dim, num_epochs, logger_train) 
+    logger_train.close()
+    
+    # 3. 추론(inference) 로그
+    log_dir_inference = os.path.join(project_path(), os.getenv("LOGS_INFERENCE_DIR", "logs/scripts/inference"))
+    os.makedirs(log_dir_inference, exist_ok=True)
+    logger_inference = Logger(os.path.join(log_dir_inference, f'inference_{timestamp}.log'), print_also=True)
+
+    logger_inference.write("--- 추론 파이프라인 실행 중... ---")  
+    run_inference(batch_size=batch_size, logger=logger_inference)
+    logger_inference.close()
 
 
 if __name__ == '__main__':
+    # 메인 로거는 전체 실행 흐름만 기록
     log_dir = os.path.join(project_path(), os.getenv("LOGS_SCRIPTS_DIR", "logs/scripts"))
-    log_filename = datetime.now().strftime('main_pipeline_%Y%m%d_%H%M%S.log')
+    log_filename = datetime.now().strftime('main_workflow_%Y%m%d_%H%M%S.log')
     log_file_path = os.path.join(log_dir, log_filename)
 
     logger = Logger(log_file_path, print_also=True)
@@ -192,7 +215,7 @@ if __name__ == '__main__':
                      run_train(model_name, batch_size, dim, num_epochs, logger),
             "inference": lambda data=None, batch_size=16: run_inference(data, batch_size, logger),
             "all": lambda model_name, batch_size=16, dim=256, num_epochs=500: \
-                   run_all_data_pipeline(model_name, batch_size, dim, num_epochs, logger)
+                   run_all_data_pipeline(model_name, batch_size, dim, num_epochs)
         })
         
         logger.write("\n--- 메인 파이프라인 실행 완료 ---")  
@@ -202,4 +225,4 @@ if __name__ == '__main__':
 
     finally:
         logger.stop_redirect()  
-        logger.close()  
+        logger.close()
