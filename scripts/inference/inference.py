@@ -74,21 +74,34 @@ def make_inference_df(data):
 def inference(model, scaler, label_encoder, data, batch_size=1):
     if data.size > 0:
         df = make_inference_df(data)
+        print("Inference input df:")
+        print(df)
         dataset = WatchLogDataset(df, scaler=scaler, label_encoder=label_encoder)
     else:
         _, _, dataset = get_datasets(scaler=scaler, label_encoder=label_encoder)
+
+    print("Dataset size:", len(dataset))
+    if len(dataset) == 0:
+        print("Warning: Empty dataset after filtering unknown content_ids.")
+        return []
 
     dataloader = SimpleDataLoader(
         dataset.features, dataset.labels, batch_size=batch_size, shuffle=False
     )
     _, predictions, accuracy = evaluate(model, dataloader)
-    # print(loss, predictions, accuracy)
+    # print("Predictions:", predictions)
 
     return [dataset.decode_content_id(idx) for idx in predictions]
 
 
 def recommend_to_df(recommend):
+    if not recommend:
+        return pd.DataFrame(columns=["recommend_content_id"])
+
+    if isinstance(recommend[0], (list, np.ndarray)):
+        recommend = [item for sublist in recommend for item in sublist]
+
     return pd.DataFrame(
         data=recommend,
-        columns="recommend_content_id".split()
+        columns=["recommend_content_id"]
     )
